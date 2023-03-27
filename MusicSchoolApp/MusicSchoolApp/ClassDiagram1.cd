@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MusicSchoolApp.Forms.TeacherForm" Collapsed="true">
+    <Position X="2" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgJCyGgw4GQSAFEgNICCQEgKzACICAYXA4AAAkCRAIA=</HashCode>
+      <FileName>Forms\TeacherForm\TaskAssignmentTab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.Forms.AdminForm" Collapsed="true">
+    <Position X="2" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBSAAAAAACCAAACAEg8AAQAAAACAIAAAAA=</HashCode>
+      <FileName>Forms\AdminForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.Forms.EntryForm" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAAAACCAAACAAAIQAAAAEAIAAAAAAA=</HashCode>
+      <FileName>Forms\EntryForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.Forms.StudentForm" Collapsed="true">
+    <Position X="2" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAQAQACAAAFEAAICQAIACAAAAAAoAAAAAAAAQAAA=</HashCode>
+      <FileName>Forms\StudentForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.Forms.Program" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.DB">
+    <Position X="9" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABABEAAQAAAAgAAAEAAhAAAAI=</HashCode>
+      <FileName>DB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.Group">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAEAAACAQQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Group.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.StudentTaskTreeNode">
+    <Position X="3.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACACA=</HashCode>
+      <FileName>StudentTaskTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.TaskTreeNode">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAKAAAAwEAAEIAACAAAAACAAAAAAAgAAAAAAAAE=</HashCode>
+      <FileName>TaskTreeNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.TryParseExtensions">
+    <Position X="5.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TryParseExtensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicSchoolApp.User">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAGAAAAAQAIAEAAACAAAABAAAAABAAAAQAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
