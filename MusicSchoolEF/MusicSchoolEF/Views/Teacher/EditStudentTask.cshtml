@@ -1,0 +1,47 @@
+﻿@using MusicSchoolEF.Models.ViewModels;
+@model StudentTaskEditViewModel
+
+@{
+	ViewData["Title"] = "Student Task Editing Page";
+}
+
+<!-- Форма для редактирования задания -->
+<div id="editFormContainer">
+	@using (Html.BeginForm("EditStudentTask", "Teacher", FormMethod.Post))
+	{
+		<!-- Защита от подделки межсайтовых запросов -->
+		@Html.AntiForgeryToken()
+
+		@Html.HiddenFor(m => m.StudentId)
+		@Html.HiddenFor(m => m.TaskId)
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Name)
+			@Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "node-name", @readonly = "readonly"})
+			@Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Description)
+			@Html.TextAreaFor(m => m.Description, new { @class = "form-control", @id = "node-description", @readonly = "readonly" })
+			@Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Mark)
+			@Html.TextBoxFor(m => m.Mark, new { @class = "form-control", @id = "node-mark" })
+			@Html.ValidationMessageFor(m => m.Mark, "", new { @class = "text-danger" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Comment)
+			@Html.TextBoxFor(m => m.Comment, new { @class = "form-control", @id = "node-mark" })
+			@Html.ValidationMessageFor(m => m.Comment, "", new { @class = "text-danger" })
+		</div>
+
+		<div class="form-group">
+			<input type="submit" value="Сохранить" class="btn btn-primary" />
+			<a href="@Url.Action("TaskAssessment", "Teacher")" class="btn btn-secondary">Отмена</a>
+		</div>
+	}
+</div>

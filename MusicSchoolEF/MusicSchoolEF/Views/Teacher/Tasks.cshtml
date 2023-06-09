@@ -1,0 +1,94 @@
+﻿@using MusicSchoolEF.Models.Db;
+@using MusicSchoolEF.Models.Defaults;
+@using MusicSchoolEF.Models.ViewModels;
+@using MusicSchoolEF.Helpers.HtmlStrings.TreeRenders
+@model TreeNode<Node>
+
+@{
+	ViewData["Title"] = "Tasks Page";
+}
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+	<div class="alert alert-danger">
+		@TempData["ErrorMessage"]
+	</div>
+}
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6 col-md-12">
+			<h1>Задания</h1>
+			<div>
+				<ul id="task-tree" class="treeline">
+					@Html.Raw(TreeRender.RenderTree(Model, "Задания"))
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-6 col-md-12">
+			<div>
+				<h1>Информация о вершине:</h1>
+				<p>Название вершины: <span id="node-name"></span></p>
+				<p>Описание вершины: <span id="node-description"></span></p>
+			</div>
+			<div>
+				<button id="editButton" class="btn btn-primary">Редактировать</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="~/js/clear_local_storage.js"></script>
+<script src="~/js/teacher_tasks.js"></script>
+<script>
+	$(document).ready(function () {
+		// Обработка нажатия на кнопку "Редактировать"
+		$('#editButton').on('click', function () {
+			var selectedNodeId = localStorage.getItem('selectedNodeId');
+			window.location.href = '@Url.Action("EditTask", "Teacher")?taskId=' + selectedNodeId;
+		});
+
+		// Логика работы кнопок "Добавить"
+		$('.treeline').on('click', '.add-button', function (event) {
+			event.stopPropagation();
+
+			var selectedNode = $(this).closest('.tree-node');
+			var selectedNodeId = selectedNode.data('nodeid');
+
+			window.location.href = '@Url.Action("AddTask", "Teacher")?parentId=' + selectedNodeId;
+		});
+
+		// Логика работы кнопок "Удалить"
+		$('.treeline').on('click', '.delete-button', function (event) {
+			event.stopPropagation();
+
+			var selectedNode = $(this).closest('.tree-node');
+			var selectedNodeId = selectedNode.data('nodeid');
+
+			// Выводим диалоговое окно с подтверждением действия
+			var confirmed = confirm("Вы уверены, что хотите удалить эту вершину и всех её потомков?");
+			if (confirmed) {
+				$.ajax({
+					url: '@Url.Action("DeleteTask", "Teacher")',
+					type: 'DELETE',
+					data: { taskId: selectedNodeId },
+					success: function (result) {
+						// Если вершина не корневая, то удаляем её и всех потмоков
+						if (selectedNodeId) {
+							selectedNode.remove();
+						// Если корневая, то саму её не удаляем, но удаляем потомков
+						} else {
+							selectedNode.children('ul').empty();
+						}
+						$('#node-name').text('');
+						$('#node-description').text('');
+						localStorage.removeItem('selectedNodeId');
+					},
+					error: function (xhr, status, error) {
+						console.log(error);
+					}
+				});
+			}
+		});
+	});
+</script>

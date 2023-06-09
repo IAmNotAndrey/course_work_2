@@ -1,0 +1,109 @@
+﻿@using MusicSchoolEF.Models.Db;
+@using MusicSchoolEF.Models.Defaults;
+@model List<User>
+
+@{
+	ViewData["Title"] = "Task Assessment Page";
+}
+
+<h1>StudentList</h1>
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+	<div class="alert alert-danger">
+		@TempData["ErrorMessage"]
+	</div>
+}
+
+<!-- Список студентов -->
+<div>
+	<ul class="list-group">
+		@foreach (var s in Model)
+		{
+			<li class="student-node list-group-item" data-student_id="@s.Id">@s.Surname @s.FirstName @s.Patronymic</li>
+		}
+	</ul>
+</div>
+
+<h1>StudentTaskList</h1>
+<!-- Список КОРНЕВЫХ заданий для выбранного студента -->
+<div>
+	<ul id="student-task-tree" class="treeline">
+
+	</ul>
+</div>
+
+<div>
+	<h3>Информация о вершине:</h3>
+	<p>Название вершины: <span id="node-name"></span></p>
+	<p>Описание вершины: <span id="node-description"></span></p>
+	<p>Оценка: <span id="node-mark"></span></p>
+	<p>Комментарий: <span id="node-comment"></span></p>
+</div>
+
+<div>
+	<button id="editButton" class="btn btn-primary">Редактировать</button>
+</div>
+
+<script src="~/js/clear_local_storage.js"></script>
+<script>
+	$(document).ready(function () {
+		// Обработка клика по студенту в списке
+		$('.student-node').click(function () {
+			// Очищаем содержимое treeline
+			$('#student-task-list').empty();
+
+			// Получаем student_id из data-атрибута
+			var studentId = $(this).data('student_id');
+
+			// Отправляем AJAX-запрос на сервер
+			$.ajax({
+				url: '@Url.Action("GetStudentTaskTree", "Teacher")',
+				type: 'GET',
+				data: { studentId: studentId },
+				success: function (data) {
+					// Обработка успешного ответа от сервера
+					$('#student-task-tree').html(data);
+					// Сохраняем `id` студента в `localStorage`
+					localStorage.setItem('selectedStudentId', studentId);
+					// Так как выбрали нового студента, удаляем `id` выбранной вершины из `localStorage`
+					localStorage.removeItem('selectedNodeId');
+				},
+				error: function () {
+					// Обработка ошибки
+					console.log('Произошла ошибка при получении данных с сервера.');
+				}
+			});
+		});
+
+		//Обработка нажатия по элементу дерева
+		$('.treeline').on('click', '.tree-node', function (event) {
+			// Используем для предотвращения распространения события на другие элементы.
+			event.stopPropagation();
+
+			var node = $(this);
+			var nodeId = node.data('nodeid')
+			var nodeName = node.data('nodename');
+			var nodeDescription = node.data('nodedescription');
+			var nodeMark = node.data('nodemark');
+			var nodeComment = node.data('nodecomment');
+
+			$('#node-name').text(nodeName);
+			$('#node-description').text(nodeDescription);
+			$('#node-mark').text(nodeMark);
+			$('#node-comment').text(nodeComment);
+
+			localStorage.setItem('selectedNodeId', nodeId);
+		});
+
+		// Обработка нажатия на кнопку "Редактировать"
+		$('#editButton').on('click', function () {
+			// Получение выбранного ID из Local Storage
+			var selectedStudentId = localStorage.getItem('selectedStudentId');
+			var selectedNodeId = localStorage.getItem('selectedNodeId');
+
+			// Перенаправляемся на форму редактирования задания
+			window.location.href = '@Url.Action("EditStudentTask", "Teacher")?studentId='+selectedStudentId+'&nodeId='+selectedNodeId 
+		});
+	});
+</script>

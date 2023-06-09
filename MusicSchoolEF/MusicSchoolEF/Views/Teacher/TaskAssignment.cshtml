@@ -1,0 +1,67 @@
+﻿@using MusicSchoolEF.Models.Db;
+@using MusicSchoolEF.Models.Defaults;
+@model List<Node>
+
+@{
+	ViewData["Title"] = "Task Asignment Page";
+}
+
+<h1>Tasks</h1>
+
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+	<div class="alert alert-danger">
+		@TempData["ErrorMessage"]
+	</div>
+}
+
+<div>
+	<ul class="list-group">
+		@foreach (var t in Model)
+		{
+			<li class="task-node list-group-item"
+				data-task_id="@t.Id"
+				data-task_name="@t.Name"
+				data-task_description="@t.Description">@t.Name</li>
+		}
+	</ul>
+</div>
+
+<div>
+	<h3>Информация о вершине:</h3>
+	<p>Название вершины: <span id="node-name"></span></p>
+	<p>Описание вершины: <span id="node-description"></span></p>
+</div>
+
+<div>
+	<button id="assignButton" class="btn btn-primary">Назначить</button>
+</div>
+
+<script src="~/js/clear_local_storage.js"></script>
+<script>
+	$(document).ready(function () {
+		// Обработка клика по КОРНЕВОМУ заданию в списке
+		$('.task-node').click(function () {
+			// Получаем `task_id` из data-атрибута
+			var selectedNodeId = $(this).data('task_id');
+			var selectedNodeName = $(this).data('task_name');
+			var selectedNodeDescription = $(this).data('task_description');
+
+			// Заполнение полей формы редактирования
+			$('#node-name').text(selectedNodeName);
+			$('#node-description').text(selectedNodeDescription);
+
+			// Сохраняем `id` выбранной вершины в Local Storage
+			localStorage.setItem('selectedNodeId', selectedNodeId);
+		});
+
+		// Обработка нажатия на кнопку "Назначить"
+		$('#assignButton').on('click', function () {
+			// Получение выбранного ID из Local Storage
+			var selectedNodeId = localStorage.getItem('selectedNodeId');
+
+			// Переход на метод контроллера "EditTask" с передачей ID в URL-адресе
+			window.location.href = '@Url.Action("AssignTask", "Teacher")?taskId=' + selectedNodeId;
+		});
+	});
+</script>
