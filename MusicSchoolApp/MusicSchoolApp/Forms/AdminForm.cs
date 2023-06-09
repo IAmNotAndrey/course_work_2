@@ -29,7 +29,8 @@ namespace MusicSchoolApp.Forms
 	
 		public AdminForm(EntryForm entryForm)
 		{
-			// ADDME: добавить CRUD-функционал
+			//
+			// ME: добавить CRUD-функционал
 			InitializeComponent();
 			this.FormClosing += (s, args) => Application.Exit();
 			this.entryForm = entryForm;

@@ -261,6 +261,7 @@ namespace MusicSchoolApp.Forms
 					|| (table.Rows.Count == 1 && checkedListBoxStudents3.GetItemChecked(i))
 				)
 				{
+
 				}
 				// Добавляем в БД (student_node_connections), в т.ч. всех потомков
 				else if (table.Rows.Count == 0 && checkedListBoxStudents3.GetItemChecked(i))
@@ -272,7 +273,7 @@ namespace MusicSchoolApp.Forms
 				{
 					RemoveAllStudentNodesWithChildren(student.Id, (uint)selectedNode.NodeId);
 				}
-				// ! Такого случая не должно быть, но на отладку ставлю вызов ошибки
+				// ! Такого случая не должно быть, но на всякий случай ставлю вызов ошибки
 				else
 				{
 					throw new Exception("Произошёл невозможный случай");
@@ -281,7 +282,7 @@ namespace MusicSchoolApp.Forms
 				//i++;
 			}
 
-			// Инициируем вызов AfterSelect "изменением" текущей выбранной вершины для того, чтобы обновились галочки у Student
+			// Инициируем вызов AfterSelect "псевдоизменением" текущей выбранной вершины для того, чтобы обновились галочки у Student
 			treeView3.SelectedNode = treeView3.SelectedNode;
 			//checkedListBox1.Refresh();
 
@@ -310,7 +311,7 @@ namespace MusicSchoolApp.Forms
 
 			//var groups = new List<Group>();
 
-			// Отписываемся от события `checkedListBoxGroups3_ItemCheck` во избежании рекурсивных вызовов друг друга
+			// Отписываемся от события `checkedListBoxGroups3_ItemCheck` во избежании рекурсивных вызовов друг друга и последующим переполнением стека
 			checkedListBoxGroups3.ItemCheck -= checkedListBoxGroups3_ItemCheck;
 
 			// Находим все группы, которые связаны со студентом
@@ -351,7 +352,7 @@ namespace MusicSchoolApp.Forms
 						}
 					}
 
-					// Проверям устанавливать ли группу в положение Checked, Indeterminate или Unchecked
+					// Проверяем устанавливать ли группу в положение Checked, Indeterminate или Unchecked
 					bool allTrue = boolList.All(b => b == true);
 					bool allFalse = boolList.All(b => b == false);
 					bool containsTrueAndFalse = boolList.Any(b => b == true) && boolList.Any(b => b == false);
@@ -361,7 +362,10 @@ namespace MusicSchoolApp.Forms
 					else if (containsTrueAndFalse)
 						checkedListBoxGroups3.SetItemCheckState(i, CheckState.Indeterminate);
 					else if (allFalse)
-						checkedListBoxGroups3.SetItemCheckState(i, CheckState.Unchecked); 
+						checkedListBoxGroups3.SetItemCheckState(i, CheckState.Unchecked);
+					// Такой случай невозможен
+					else
+						throw new Exception();
 				}
 			}
 
@@ -400,10 +404,9 @@ namespace MusicSchoolApp.Forms
 		}
 		#endregion
 
-		#region Рекурсивные операции с таблицей `student_node_connections`
+		#region Рекурсивные функции, выполняющие операции с таблицей `student_node_connections`
 		private void RemoveAllStudentNodesWithChildren(uint studentId, uint nodeId)
 		{
-			// FIXME: не происходит операция удаления
 			var cmd = new MySqlCommand(
 				"DELETE FROM `student_node_connections` " +
 				"WHERE `node` = @nodeId " +

@@ -1,3 +1,5 @@
+using MusicSchoolApp.Lab3Task;
+
 namespace MusicSchoolApp.Forms
 {
 	internal static class Program
@@ -11,7 +13,10 @@ namespace MusicSchoolApp.Forms
 			// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
+
+			// note Запуск начальной формы
 			Application.Run(new EntryForm());
+			//Application.Run(new Lab3TaskForm());
 		}
 	}
 }

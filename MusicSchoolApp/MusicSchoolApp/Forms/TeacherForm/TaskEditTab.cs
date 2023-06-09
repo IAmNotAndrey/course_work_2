@@ -14,7 +14,7 @@ namespace MusicSchoolApp.Forms
 
 		private void TaskEditTabSets()
 		{
-			// Временна отписка для не изменения значений в БД
+			// Временная отписка во избежание изменений значений в БД, тк при изменении текстовых полей сохранение идёт сразу без запроса сохранения
 			nameField.TextChanged -= nameField_TextChanged;
 			descriptionField.TextChanged -= descriptionField_TextChanged;
 			// Очистка полей при переходе на эту вкладку
@@ -24,12 +24,10 @@ namespace MusicSchoolApp.Forms
 			nameField.TextChanged += nameField_TextChanged;
 			descriptionField.TextChanged += descriptionField_TextChanged;
 
-
 			SetTrees(teacher.Id);
 
 			ChangeNotify += MakeSaveEnabled;
 
-			// hack: при создании всё равно остаётся Enabled. Связано с MakeSaveEnabled
 			saveBtn.Enabled = false;
 			cancelBtn.Enabled = false;
 
@@ -38,19 +36,22 @@ namespace MusicSchoolApp.Forms
 			descriptionField.ReadOnly = true;
 		}
 
-
-		#region Работа с отображением дерева
 		private void SetTrees(uint teacherId)
 		{
 			treeView1.Nodes.Clear();
 
 			var list = new List<TaskTreeNode>();
 
-			var cmd = new MySqlCommand($"SELECT `id` FROM `nodes` WHERE `owner` = @teacherId", db.GetConnection());
-			cmd.Parameters.Add("@teacherId", MySqlDbType.UInt32).Value = teacherId;
-			adapter.SelectCommand = cmd;
-			var table = new DataTable();
-			adapter.Fill(table);
+			// Находим все задания, создателем которых является текущий преподаватель
+			//var cmd = new MySqlCommand(
+			//	"SELECT `id` FROM `nodes` " +
+			//	"WHERE `owner` = @teacherId",
+			//	db.GetConnection());
+			//cmd.Parameters.Add("@teacherId", MySqlDbType.UInt32).Value = teacherId;
+			//adapter.SelectCommand = cmd;
+			//var table = new DataTable();
+			//adapter.Fill(table);
+			DataTable table = DBSearchers.GetAllTasksByTeacher(teacherId);
 
 			foreach (var item in table.Rows)
 			{
@@ -70,7 +71,6 @@ namespace MusicSchoolApp.Forms
 			foreach (var item in list.FindAll(node => node.ParentId == null))
 				treeView1.Nodes.Add(item);
 		}
-		#endregion
 
 		#region Обработчики событий
 		private void addBtn_Click(object sender, EventArgs e)

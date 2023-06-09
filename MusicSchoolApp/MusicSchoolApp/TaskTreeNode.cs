@@ -200,5 +200,10 @@ namespace MusicSchoolApp
 				{"priority", priority}
 			};
 		}
+
+		public override string ToString()
+		{
+			return NodeName;
+		}
 	}
 }

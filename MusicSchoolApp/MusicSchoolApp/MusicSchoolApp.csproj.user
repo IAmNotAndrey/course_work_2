@@ -22,5 +22,17 @@
     <Compile Update="Forms\TeacherForm\TeacherForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Lab3Task\GroupInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Lab3Task\Lab3TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Lab3Task\StudentInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Lab3Task\TaskInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

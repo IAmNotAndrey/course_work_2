@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MusicSchoolApp
 {
-	internal class User
+	public class User
 	{
 		private static DB db = new DB();
 		private static MySqlDataAdapter adapter = new MySqlDataAdapter();
