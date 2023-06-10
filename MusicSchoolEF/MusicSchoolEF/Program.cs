@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Models.Defaults;
+using MusicSchoolEF.Repositories;
+using MusicSchoolEF.Repositories.Interfaces;
 
 //// Определение ролей
 //var adminRole = new Role();
@@ -69,6 +71,11 @@ builder.Services.AddDbContext<Ms2Context>((serviceProvider, options) =>
     var connectionString = configuration.GetConnectionString("DefaultConnection");
     options.UseMySql(connectionString, new MySqlServerVersion(new Version(5, 7, 24)));
 });
+builder.Services.AddScoped<IGroupRepository, GroupRepository>();
+builder.Services.AddScoped<INodeRepository, NodeRepository>();
+builder.Services.AddScoped<IStudentNodeConnectionRepository, StudentNodeConnectionRepository>();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

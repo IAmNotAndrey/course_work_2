@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Helpers.TreeBuilders;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Models.Defaults;
+using MusicSchoolEF.Repositories.Interfaces;
 
 namespace MusicSchoolEF.Controllers
 {
@@ -11,35 +12,37 @@ namespace MusicSchoolEF.Controllers
     [Route("Student/{id:int}/{action=Index}")]
 	public class StudentController : Controller
 	{
-		private readonly Ms2Context _dbContext;
-        //private User _student = null!;
+        private readonly IStudentNodeConnectionRepository _studentNodeConnectionRepository;
+        private readonly IUserRepository _userRepository;
 
-		public StudentController(Ms2Context dbContext)
+		public StudentController(
+            IStudentNodeConnectionRepository studentNodeConnectionRepository,
+            IUserRepository userRepository
+            )
 		{
-			_dbContext = dbContext;
+			_studentNodeConnectionRepository = studentNodeConnectionRepository;
+			_userRepository = userRepository;
 		}
 
         [HttpGet]
-        public async Task<IActionResult> Index(int id)
+        public async Task<IActionResult> Index(uint id)
         {
-            User student = await _dbContext.Users
-                // note добавить методы `include` по необходимости
-                .SingleAsync(u => u.Id == id);
+            User? student = await _userRepository.GetUserByIdAsync(id) 
+                ?? throw new NullReferenceException("Пользователь по заданному `id` не был найден");
 
             return View(student);
         }
 
-        public async Task<IActionResult> Tasks(int id)
+        [HttpGet]
+        public async Task<IActionResult> Tasks(uint id)
         {
-			// Находим все занятия, `Student` которых равен текущему ученику (`Student` == `id`)
-			var allStudentTasks = await _dbContext.StudentNodeConnections
-                .Include(snc => snc.NodeNavigation) // Подключение отображения `Node`
-                .Include(snc => snc.NodeNavigation.InverseParentNavigation) // Подключение потомков
-                .Include(snc => snc.NodeNavigation.OwnerNavigation) // Подключение учителя
-                .Where(snc => snc.Student == id) // Возвращение по `id` студента `StudentNodeConnection`
-                .ToListAsync();
+            // Находим все занятия, `Student` которых равен текущему ученику (`Student` == `id`)
+            var allStudentTasks = await _studentNodeConnectionRepository
+                .GetStudentNodeConnectionsByStudentIdAsync(id);
 
-            var tree = TreeBuilder.GetStudentNodesTree(allStudentTasks);
+            var tree = allStudentTasks != null 
+                ? TreeBuilder.GetStudentNodesTree(allStudentTasks) 
+                : new TreeNode<StudentNodeConnection>();
 
             return View(tree);
         }

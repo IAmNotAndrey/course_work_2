@@ -2,12 +2,12 @@
 
 namespace MusicSchoolEF.Models.ViewModels
 {
-    public enum CheckedState
-    {
-        Checked,
-        Unchecked,
-        Intermediate
-    }
+    //public enum CheckedState
+    //{
+    //    Checked,
+    //    Unchecked,
+    //    Intermediate
+    //}
 
     public class TaskAssignmentViewModel
     {

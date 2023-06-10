@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Jy+mvhvYeme8oJDvhKB1Tj3lLvVRDQvf0QZeMkvQUUM=",
+  "Hash": "ouUe1gvJ+iOKmc5F2azbIxdi2Vpzy6Rhig5I25xkrO4=",
   "Source": "MusicSchoolEF",
   "BasePath": "_content/MusicSchoolEF",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "MusicSchoolEF\\wwwroot",
       "Source": "MusicSchoolEF",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "Pattern": "**"
     }
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "C:\\Users\\perma\\.nuget\\packages\\syncfusion.blazor\\21.2.6\\staticwebassets\\styles\\tailwind-dark.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MusicSchoolEF.styles.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MusicSchoolEF.styles.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "MusicSchoolEF.styles.css",
       "AssetKind": "All",
@@ -1731,13 +1731,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MusicSchoolEF.styles.css"
+      "OriginalItemSpec": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\bundle\\MusicSchoolEF.styles.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MusicSchoolEF.bundle.scp.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MusicSchoolEF.bundle.scp.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "MusicSchoolEF.bundle.scp.css",
       "AssetKind": "All",
@@ -1748,13 +1748,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MusicSchoolEF.bundle.scp.css"
+      "OriginalItemSpec": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MusicSchoolEF.bundle.scp.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\list.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\list.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "css/list.css",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\css\\list.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\site.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\site.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\tree.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\tree.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "css/tree.css",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\css\\tree.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\favicon.ico",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\favicon.ico",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\clear_local_storage.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\clear_local_storage.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "js/clear_local_storage.js",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\js\\clear_local_storage.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\list_element_select.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\list_element_select.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "js/list_element_select.js",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\js\\list_element_select.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\site.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\site.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\teacher_tasks.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\teacher_tasks.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "js/teacher_tasks.js",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\js\\teacher_tasks.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\tree.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\tree.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "js/tree.js",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\js\\tree.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -2261,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -2295,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -2312,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -2329,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -2346,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2363,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2380,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2397,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2414,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2431,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2448,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2465,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2482,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2499,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2516,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2533,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2550,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2567,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2584,10 +2584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2618,10 +2618,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2635,10 +2635,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2652,10 +2652,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2669,10 +2669,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2686,10 +2686,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2703,10 +2703,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2720,10 +2720,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2737,10 +2737,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2754,10 +2754,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2771,10 +2771,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2788,10 +2788,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2805,10 +2805,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2822,10 +2822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2839,10 +2839,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2856,10 +2856,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "MusicSchoolEF",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
       "BasePath": "_content/MusicSchoolEF",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",

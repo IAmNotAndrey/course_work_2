@@ -9,89 +9,89 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicSchoolEF
 build_property.RootNamespace = MusicSchoolEF
-build_property.ProjectDir = D:\GitHub\HSE\Практика (2 курс 4 модуль)\MusicSchoolEF\MusicSchoolEF\
+build_property.ProjectDir = D:\GitHub\course_work_2\MusicSchoolEF\MusicSchoolEF\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\GitHub\HSE\Практика (2 курс 4 модуль)\MusicSchoolEF\MusicSchoolEF
+build_property.MSBuildProjectDirectory = D:\GitHub\course_work_2\MusicSchoolEF\MusicSchoolEF
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Account/AccessDenied.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Account/AccessDenied.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Account/Login.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Admin/Index.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Home/Index.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Home/Privacy.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Shared/Error.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Student/Index.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Student/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Student/Tasks.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Student/Tasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/AddTask.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/AddTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxBZGRUYXNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/AssignTask.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/AssignTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxBc3NpZ25UYXNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/EditStudentTask.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/EditStudentTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxFZGl0U3R1ZGVudFRhc2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/EditTask.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/EditTask.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxFZGl0VGFzay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/Index.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/TaskAssessment.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/TaskAssessment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxUYXNrQXNzZXNzbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/TaskAssignment.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/TaskAssignment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxUYXNrQXNzaWdubWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Teacher/Tasks.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Teacher/Tasks.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxUYXNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/_ViewImports.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/_ViewStart.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GitHub/HSE/Практика (2 курс 4 модуль)/MusicSchoolEF/MusicSchoolEF/Views/Shared/_Layout.cshtml]
+[D:/GitHub/course_work_2/MusicSchoolEF/MusicSchoolEF/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dmdt0kcser

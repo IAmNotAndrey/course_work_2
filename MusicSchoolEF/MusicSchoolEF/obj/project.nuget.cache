@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LnTGqdfPNx2xfrpIUdVuD2gnn4GUQhHWYR7MDbQ7KUS7XXFDy2fOMZUZ4HE4WGz22qXl0IdL9x7nKq/EkAQM0w==",
+  "dgSpecHash": "zAV7BGlnKDdfa0DBVfJP+x+PFcq8eqhU4iqhhXopVKZx5KBLWXmnO0hTy/hkRf5a7Ky4g6/RdWm8HOOMsHUqCw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\HSE\\Практика (2 курс 4 модуль)\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolEF.csproj",
+  "projectFilePath": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolEF.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\perma\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\perma\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.5\\microsoft.aspnetcore.authorization.6.0.5.nupkg.sha512",

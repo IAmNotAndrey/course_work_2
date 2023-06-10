@@ -6,21 +6,22 @@ using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Models.Defaults;
 using MusicSchoolEF.Models.ViewModels;
+using MusicSchoolEF.Repositories.Interfaces;
 using System.Security.Claims;
-using static MusicSchoolEF.Helpers.HashPasswordHelper;
+using static MusicSchoolEF.Helpers.PasswordHelper;
 
 namespace MusicSchoolEF.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly Ms2Context _dbContext;
+		private readonly IUserRepository _userRepository;
 
-        public AccountController(Ms2Context dbContext)
-        {
-            _dbContext = dbContext;
-        }
+		public AccountController(IUserRepository userRepository)
+		{
+			_userRepository = userRepository;
+		}
 
-        [HttpGet]
+		[HttpGet]
         public IActionResult Login() => View(new LoginViewModel());
 
         [HttpPost]
@@ -32,41 +33,33 @@ namespace MusicSchoolEF.Controllers
                 return View(model);
             }
 
-            var user = await _dbContext.Users
-                .SingleOrDefaultAsync(u => u.Login == model.Login);
+			var user = await _userRepository.GetUserByLoginAsync(model.Login);
 
-            if (user == null)
-            {
-                // Добавляем сообщение об ошибке в модель состояния
-                ModelState.AddModelError("Login", "Пользователь не был найден");
-                // Возвращаем форму входа с сообщением об ошибке
-                return View(model);
-            }
-            if (user.Password != GetHashPassword(model.Password))
-            {
-                // Добавляем сообщение об ошибке в модель состояния
-                ModelState.AddModelError("Password", "Неверный пароль");
-                // Возвращаем форму входа с сообщением об ошибке
-                return View(model);
-            }
+			if (user == null)
+			{
+				// Добавляем сообщение об ошибке в модель состояния
+				ModelState.AddModelError("Login", "Пользователь не был найден");
+				// Возвращаем форму входа с сообщением об ошибке
+				return View(model);
+			}
+			if (!IsPasswordValid(model.Password, user.Password))
+			{
+				// Добавляем сообщение об ошибке в модель состояния
+				ModelState.AddModelError("Password", "Неверный пароль");
+				// Возвращаем форму входа с сообщением об ошибке
+				return View(model);
+			}
 
-            var result = Authenticate(user);
-            // Сохранить id пользователя в куки
-            Response.Cookies.Append("UserId", user.Id.ToString());
+			var result = Authenticate(user);
+			// Сохраняем `id` пользователя в куки
+			Response.Cookies.Append("UserId", user.Id.ToString());
 
-            // Выполняем аутентификацию пользователя
-            await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, 
-                new ClaimsPrincipal(result));
+			// Выполняем аутентификацию пользователя
+			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+				new ClaimsPrincipal(result));
 
-            return user.Role switch
-            {
-                Roles.Admin => RedirectToAction("Index", "Admin", new { id = user.Id }),
-                Roles.Teacher => RedirectToAction("Index", "Teacher", new { id = user.Id }),
-                Roles.Student => RedirectToAction("Index", "Student", new { id = user.Id }),
-
-                _ => RedirectToAction("Error", "Home"),
-            };
-        }
+			return RedirectToUserRole(user.Role, user.Id);
+		}
 
         public async Task<IActionResult> Logout()
         {
@@ -84,5 +77,16 @@ namespace MusicSchoolEF.Controllers
             return new ClaimsIdentity(claims, "ApplicationCookie",
                 ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
         }
-    }
+
+		private IActionResult RedirectToUserRole(string role, uint userId)
+		{
+			return role switch
+			{
+				Roles.Admin => RedirectToAction("Index", "Admin", new { id = userId }),
+				Roles.Teacher => RedirectToAction("Index", "Teacher", new { id = userId }),
+				Roles.Student => RedirectToAction("Index", "Student", new { id = userId }),
+				_ => RedirectToAction("Error", "Home"),
+			};
+		}
+	}
 }
