@@ -1,17 +1,18 @@
 ﻿@model IEnumerable<MusicSchoolEF.Models.Db.User>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Главная";
 }
 
-<h1>Index</h1>
+<h1>Главная</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Создать нового</a>
 </p>
 <table class="table">
     <thead>
         <tr>
+            <!--
             <th>
                 @Html.DisplayNameFor(model => model.FirstName)
             </th>
@@ -29,6 +30,25 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.RoleNavigation)
+            </th>
+            -->
+            <th>
+                @Html.DisplayName("Имя")
+            </th>
+            <th>
+                @Html.DisplayName("Фамилия")
+            </th>
+            <th>
+                @Html.DisplayName("Отчество")
+            </th>
+            <th>
+                @Html.DisplayName("Логин")
+            </th>
+            <th>
+                @Html.DisplayName("Пароль")
+            </th>
+            <th>
+                @Html.DisplayName("Роль")
             </th>
             <th></th>
         </tr>
@@ -55,9 +75,9 @@
                 @Html.DisplayFor(modelItem => item.RoleNavigation.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Редактировать</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Детали</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
             </td>
         </tr>
 }

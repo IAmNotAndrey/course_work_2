@@ -1,12 +1,20 @@
 ﻿@model MusicSchoolEF.Models.Db.Group
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Редактировать группу";
 }
 
-<h1>Edit</h1>
 
-<h4>Group</h4>
+@if (TempData.ContainsKey("ErrorMessage"))
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<h1>Редактировать</h1>
+
+<h4>Группа</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -20,7 +28,7 @@
             <div class="form-group">
                 <fieldset>
                     <input type="hidden" name="id" value="@Model.Name" />
-                    <legend>Students</legend>
+                    <legend>Ученики</legend>
                     @foreach (var student in ViewBag.Students)
                     {
                         var isChecked = ViewBag.GroupStudents.Contains(student);
@@ -39,7 +47,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Назад</a>
 </div>
 
 @section Scripts {

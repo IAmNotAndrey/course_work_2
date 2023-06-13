@@ -2,7 +2,7 @@
 @model (List<User> Students, List<User> Teachers)
 
 @{
-	ViewData["Title"] = "Admin Page";
+	ViewData["Title"] = "Главная";
 }
 
 <div>
@@ -11,7 +11,7 @@
 		@foreach (var t in Model.Teachers)
 		{
 			<li class="list-group-item">
-				<a href="@Url.Action("Index", "Teacher", new { id = t.Id })">@t.Surname @t.FirstName @t.Patronymic</a>
+				<a href="@Url.Action("Index", "Teacher", new { id = t.Id })">@t.FullName</a>
 			</li>
 		}
 	</ul>
@@ -23,7 +23,7 @@
 		@foreach (var s in Model.Students)
 		{
 			<li class="list-group-item">
-				<a href="@Url.Action("Index", "Student", new { id = s.Id })">@s.Surname @s.FirstName @s.Patronymic</a>
+				<a href="@Url.Action("Index", "Student", new { id = s.Id })">@s.FullName</a>
 			</li>
 		}
 	</ul>

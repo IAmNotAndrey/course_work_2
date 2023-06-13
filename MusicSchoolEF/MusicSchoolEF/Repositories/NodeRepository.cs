@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Models.Db;
+using MusicSchoolEF.Models.ViewModels;
 using MusicSchoolEF.Repositories.Interfaces;
 
 namespace MusicSchoolEF.Repositories
@@ -30,10 +31,11 @@ namespace MusicSchoolEF.Repositories
 				.SingleOrDefaultAsync(n => n.Id == nodeId);
 		}
 
-		public async Task EditNodeNameAndDescriptionAsync(Node editingNode, string newName, string newDescription)
+		public async Task EditNodeNameAndDescriptionAsync(Node editingNode, TeacherTaskEditViewModel model)
 		{
-			editingNode.Name = newName;
-			editingNode.Description = newDescription;
+			editingNode.Name = model.Name;
+			editingNode.Description = model.Description;
+			editingNode.Priority = model.Priority;
 
 			await _dbContext.SaveChangesAsync();
 		}

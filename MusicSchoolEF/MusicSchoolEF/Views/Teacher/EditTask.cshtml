@@ -13,7 +13,6 @@
 		@Html.AntiForgeryToken()
 
 		@Html.HiddenFor(m => m.TaskId)
-		@Html.HiddenFor(m => m.Priority)
 
 		<div class="form-group">
 			@Html.LabelFor(m => m.Name)
@@ -25,6 +24,12 @@
 			@Html.LabelFor(m => m.Description)
 			@Html.TextAreaFor(m => m.Description, new { @class = "form-control", @id = "node-description" })
 			@Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(m => m.Priority)
+			@Html.TextAreaFor(m => m.Priority, new { @class = "form-control", @id = "node-description" })
+			@Html.ValidationMessageFor(m => m.Priority, "", new { @class = "text-danger" })
 		</div>
 
 		<div class="form-group">

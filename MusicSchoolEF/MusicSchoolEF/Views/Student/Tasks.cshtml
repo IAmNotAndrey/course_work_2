@@ -7,18 +7,18 @@
 @model TreeNode<StudentNodeConnection>
 
 @{
-	ViewData["Title"] = "Tasks";
+	ViewData["Title"] = "Занятия";
 }
 
-<h1 class="display-4 text-center">Tasks</h1>
+<h1 class="display-4">Занятия</h1>
 
 <div class="row justify-content-center">
 	<div class="col-md-6">
 		<div class="card bg-light">
 			<div class="card-body">
-				<h3 class="card-title">Дерево</h3>
+				<h3 class="card-title">Дерево занятий</h3>
 				<ul class="treeline list-group list-group-flush">
-					@Html.Raw(TreeRender.RenderTree(Model, "Задания"))
+					@Html.Raw(TreeRender.RenderTree(Model, "Занятия"))
 				</ul>
 			</div>
 			<button id="report-button" class="btn btn-secondary">Отчёт</button>
@@ -27,9 +27,9 @@
 	<div class="col-md-6">
 		<div class="card bg-light">
 			<div class="card-body">
-				<h3 class="card-title">Информация о вершине</h3>
-				<p><strong>Название вершины:</strong> <span id="node-name"></span></p>
-				<p><strong>Описание вершины:</strong> <span id="node-description"></span></p>
+				<h3 class="card-title">Информация о занятии</h3>
+				<p><strong>Название:</strong> <span id="node-name"></span></p>
+				<p><strong>Описание:</strong> <span id="node-description"></span></p>
 				<p><strong>Оценка:</strong> <span id="node-mark"></span></p>
 				<p><strong>Комментарий:</strong> <span id="node-comment"></span></p>
 				<p><strong>Преподаватель:</strong> <span id="node-teacher_name"></span></p>

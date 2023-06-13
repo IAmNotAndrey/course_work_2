@@ -16,7 +16,8 @@ namespace MusicSchoolEF.Models.ViewModels
 		[MaxLength(5000, ErrorMessage = "Описание должно иметь длину не более 5000 символов")]
 		public string? Description { get; set; }
 
-		[ReadOnly(true)]
-		public uint Priority { get; set; } = 0;
+		//[ReadOnly(true)]
+		[DefaultValue(0)]
+		public uint Priority { get; set; }
 	}
 }

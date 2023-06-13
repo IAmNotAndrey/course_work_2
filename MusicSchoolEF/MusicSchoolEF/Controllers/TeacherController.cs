@@ -79,7 +79,8 @@ namespace MusicSchoolEF.Controllers
 			{
 				TaskId = node.Id,
 				Name = node.Name,
-				Description = node.Description
+				Description = node.Description,
+				Priority = node.Priority,
 			};
 			return View(viewModel);
 		}
@@ -94,9 +95,8 @@ namespace MusicSchoolEF.Controllers
 
 				await _nodeRepository.EditNodeNameAndDescriptionAsync(
 					editingNode,
-					model.Name,
-					model.Description ?? ""
-				);
+                    model
+                );
 
 				return RedirectToAction("Tasks");
 			}

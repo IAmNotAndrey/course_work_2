@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Models.Defaults;
 using MySqlConnector;
+using static MusicSchoolEF.Helpers.StringHelper;
 
 namespace MusicSchoolEF.Controllers
 {
@@ -61,11 +62,11 @@ namespace MusicSchoolEF.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name")] Group @group, List<uint> studentIds)
+        public async Task<IActionResult> Create([Bind("Name")] Group group, List<uint> studentIds)
         {
             if (ModelState.IsValid)
             {
-                @group.Name = group.Name.Trim();
+                group.Name = group.Name.MyTrim();
 
                 // Получаем объекты студентов из БД на основе выбранных идентификаторов
                 List<User> selectedStudents = await _context.Users
@@ -74,7 +75,7 @@ namespace MusicSchoolEF.Controllers
 
                 group.Students = selectedStudents;
 
-                _context.Add(@group);
+                _context.Groups.Add(group);
                 // Обработка случая добавления дубликата
                 try
                 {
@@ -82,13 +83,15 @@ namespace MusicSchoolEF.Controllers
                 } 
                 catch (DbUpdateException)
                 {
-                    TempData["ErrorMessage"] = "Ошибка: группа с таким названием уже существует.";
-                    return View(@group);
+                    TempData["ErrorMessage"] = "Ошибка: группа с таким названием уже существует";
+                    ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+                    return View(group);
                 }
 
                 return RedirectToAction(nameof(Index));
             }
-            return View(@group);
+            ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+            return View(group);
         }
 
         // note : закомментированы т.к. изменение первичного ключа происходит напрямую без `id`, что некорректно
@@ -100,8 +103,8 @@ namespace MusicSchoolEF.Controllers
                 return NotFound();
             }
 
-            var @group = await _context.Groups.FindAsync(id);
-            if (@group == null)
+            var group = await _context.Groups.FindAsync(id);
+            if (group == null)
             {
                 return NotFound();
             }
@@ -141,7 +144,7 @@ namespace MusicSchoolEF.Controllers
                     .SingleOrDefaultAsync(g => g.Name == id)
                     ?? throw new NullReferenceException();
 
-                group.Name = group.Name.Trim();
+                group.Name = group.Name.MyTrim();
                 group.Students = selectedStudents;
 
                 // Если у новое название группы не совпадает с прежним, то удаляем группу с прежним названием и добавляем с новым
@@ -151,6 +154,7 @@ namespace MusicSchoolEF.Controllers
                     _context.Groups.Add(group);
                 }
                 // Если совпадает, то просто изменяем выбранных студентов
+                else
                 {
                     groupByOriginalName.Students = selectedStudents;
                 }
@@ -159,19 +163,18 @@ namespace MusicSchoolEF.Controllers
                 {
                     await _context.SaveChangesAsync();
                 }
-                catch (DbUpdateConcurrencyException)
+                catch (DbUpdateException)
                 {
-                    if (!GroupExists(group.Name))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    group.Name = id;
+                    TempData["ErrorMessage"] = "Ошибка: группа с таким названием уже существует";
+                    ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+                    ViewBag.GroupStudents = group.Students;
+                    return View(group);
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+            ViewBag.GroupStudents = group.Students;
             return View(group);
         }
 

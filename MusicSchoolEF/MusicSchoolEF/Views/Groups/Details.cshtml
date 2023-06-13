@@ -1,13 +1,13 @@
 ﻿@model MusicSchoolEF.Models.Db.Group
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Детали";
 }
 
-<h1>Details</h1>
+<h1>Детали</h1>
 
 <div>
-    <h4>Group</h4>
+    <h4>Группа</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -18,7 +18,18 @@
         </dd>
     </dl>
 </div>
+
 <div>
-    <!-- <a asp-action="Edit" asp-route-id="@Model?.Name">Edit</a> | -->
-    <a asp-action="Index">Back to List</a>
+    <h4>Ученики</h4>
+    <ul>
+        @foreach (var student in Model.Students)
+        {
+            <li>@student.FullName</li>
+        }
+    </ul>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Name">Редактировать</a> |
+    <a asp-action="Index">Назад</a>
 </div>
