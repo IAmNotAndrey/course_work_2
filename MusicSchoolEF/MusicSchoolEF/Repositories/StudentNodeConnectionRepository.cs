@@ -17,9 +17,9 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<StudentNodeConnection>> GetStudentNodeConnectionsByStudentIdAsync(uint studentId)
 		{
 			var allStudentTasks = await _dbContext.StudentNodeConnections
-				.Include(snc => snc.NodeNavigation)
-				.Include(snc => snc.NodeNavigation.InverseParentNavigation) // Подключение потомков
-				.Include(snc => snc.NodeNavigation.OwnerNavigation)
+				//.Include(snc => snc.NodeNavigation)
+				//.Include(snc => snc.NodeNavigation.InverseParentNavigation) // Подключение потомков
+				//.Include(snc => snc.NodeNavigation.OwnerNavigation)
 				.Where(snc => snc.Student == studentId)
 				.ToListAsync();
 
@@ -29,7 +29,7 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<StudentNodeConnection>> GetStudentNodeConnectionsByStudentIdAndTeacherIdAsync(uint studentId, uint teacherId)
 		{
 			return await _dbContext.StudentNodeConnections
-				.Include(snc => snc.NodeNavigation)
+				//.Include(snc => snc.NodeNavigation)
 				.Where(snc => snc.Student == studentId
 							&& snc.NodeNavigation.Owner == teacherId)
 				.ToListAsync();
@@ -38,7 +38,7 @@ namespace MusicSchoolEF.Repositories
 		public async Task<StudentNodeConnection?> GetStudentNodeConnectionByPrimaryKey(uint studentId, uint nodeId)
 		{
 			return await _dbContext.StudentNodeConnections
-				.Include(snc => snc.NodeNavigation)
+				//.Include(snc => snc.NodeNavigation)
 				.SingleOrDefaultAsync(snc => snc.Student == studentId && snc.Node == nodeId);
 		}
 
@@ -64,7 +64,7 @@ namespace MusicSchoolEF.Repositories
 		/// <summary>
 		/// Обновляет таблицу `StudentNodeConnection` по `IsChecked` у `students`
 		/// </summary>
-		public async Task UpdateTable(List<StudentViewModel> students, List<Node> nodeAndDescendants)
+		public async Task UpdateTable(List<StudentCheckBoxViewModel> students, List<Node> nodeAndDescendants)
 		{
 			foreach (var student in students)
 			{

@@ -1,0 +1,42 @@
+﻿@using MusicSchoolEF.Models.Db;
+@using MusicSchoolEF.Models.ViewModels;
+@model GroupTaskAssignmentViewModel
+
+@{
+    ViewData["Title"] = "Group Task Assignment Page";
+}
+
+<h1>Выберите группы:</h1>
+@using (Html.BeginForm("AssignGroupTask", "Teacher", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Task.Id)
+
+    @for (int i = 0; i < Model.Groups.Count; i++)
+    {
+        @Html.HiddenFor(m => m.Groups[i].Name)
+        @for (int j = 0; j < Model.Groups[i].StudentIds.Count; j++)
+        {
+            @Html.HiddenFor(m => m.Groups[i].StudentIds[j])
+        }
+
+        var groupViewModel = Model.Groups[i];
+        var groupState = Model.Groups[i].State; // Получаем значение State
+
+        <div>
+            <span class="tristate tristate-checkbox">
+                <input type="radio" name="Groups[@i].State" value="-1" checked="@(groupState == -1 ? "checked" : null)">
+                <input type="radio" name="Groups[@i].State" value="0" checked="@(groupState == 0 ? "checked" : null)">
+                <input type="radio" name="Groups[@i].State" value="1" checked="@(groupState == 1 ? "checked" : null)">
+                <i></i>
+                <label>@groupViewModel.Name</label>
+                <label>@groupViewModel.Name</label>
+                <label>@groupViewModel.Name</label>
+            </span>
+        </div>
+    }
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+        <a href="@Url.Action("TaskAssignment", "Teacher")" class="btn btn-secondary">Отмена</a>
+    </div>
+}

@@ -1,17 +1,11 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Models.Defaults;
 using MusicSchoolEF.Repositories;
 using MusicSchoolEF.Repositories.Interfaces;
 
-//// Определение ролей
-//var adminRole = new Role();
-//adminRole.Name = "admin";
-//var teacherRole = new Role();
-//teacherRole.Name = "teacher";
-//var studentRole = new Role();
-//studentRole.Name = "student";
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,39 +14,6 @@ builder.Services.AddControllersWithViews();
 
 // Настройка конфигурации
 builder.Configuration.AddJsonFile("appsettings.json");
-
-
-/*
-// Authentication
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-        .AddCookie(options =>
-        {
-            options.Cookie.Name = "AuthCookie"; // Имя аутентификационной куки
-            //options.Cookie.HttpOnly = true;
-            options.ExpireTimeSpan = TimeSpan.FromMinutes(60); // Время истечения срока действия куки
-            options.LoginPath = "/Account/Login"; // Путь к странице входа
-            options.AccessDeniedPath = "/Account/AccessDenied"; // Путь к странице отказа в доступе
-        });
-// Authorization
-//builder.Services.AddAuthorization(options =>
-//{
-//    options.AddPolicy("StudentOnly", policy =>
-//    {
-//        policy.RequireRole("student");
-//    });
-//});
-builder.Services.AddAuthorization();
-
-
-builder.Services.AddControllers(options =>
-{
-    // Применить авторизацию ко всем контроллерам и действиям по умолчанию
-    var policy = new AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .Build();
-    options.Filters.Add(new AuthorizeFilter(policy));
-});
-*/
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -77,6 +38,11 @@ builder.Services.AddScoped<IStudentNodeConnectionRepository, StudentNodeConnecti
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+
+//// Отключает провреку на null для моделей
+//builder.Services.AddControllers(
+//    options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -95,28 +61,8 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
-#region Routing
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}");
-//app.MapControllerRoute(
-//    name: "account",
-//    pattern: "{controller=Account}/{action=Login}");
-//app.MapControllerRoute(
-//    name: "student",
-//    pattern: "{controller=Student}/{id:int}/{action=Index}");
-//app.MapControllerRoute(
-//    name: "teacher",
-//    pattern: "{controller=Teacher}/{id:int}/{action=Index}");
-#endregion
-
-//using (var db = new Ms2Context())
-//{
-//    var n = db.Nodes
-//        .Include(n => n.StudentNodeConnections)
-//        .Single(n => n.Id == 62);
-//    Console.WriteLine(n);
-//}
 
 app.Run();

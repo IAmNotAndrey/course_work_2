@@ -20,8 +20,8 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<User>> GetStudentsAssignedTasksByTeacherAsync(uint teacherId)
 		{
 			return await _dbContext.Users
-				.Include(s => s.StudentNodeConnections)
-				.ThenInclude(snc => snc.NodeNavigation)
+				//.Include(s => s.StudentNodeConnections)
+				//.ThenInclude(snc => snc.NodeNavigation)
 				// Ищем, привязано ли к ученику хотя бы одно задание, создаталем которого является учитель
 				.Where(s => s.StudentNodeConnections.Any(snc => snc.NodeNavigation.Owner == teacherId))
 				.ToListAsync();
@@ -30,8 +30,8 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<User>> GetAllStudentsAsync()
 		{
 			return await _dbContext.Users
-				.Include(u => u.StudentNodeConnections)
-				.ThenInclude(snc => snc.NodeNavigation)
+				//.Include(u => u.StudentNodeConnections)
+				//.ThenInclude(snc => snc.NodeNavigation)
 				.Where(u => u.Role == Roles.Student)
 				.ToListAsync();
 		}

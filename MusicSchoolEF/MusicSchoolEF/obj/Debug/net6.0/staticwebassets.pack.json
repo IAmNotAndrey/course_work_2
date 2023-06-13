@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\css\\tree.css"
     },
     {
+      "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\tristate.css",
+      "PackagePath": "staticwebassets\\css\\tristate.css"
+    },
+    {
+      "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\tristate.min.css",
+      "PackagePath": "staticwebassets\\css\\tristate.min.css"
+    },
+    {
+      "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\tristate.scss",
+      "PackagePath": "staticwebassets\\css\\tristate.scss"
+    },
+    {
       "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

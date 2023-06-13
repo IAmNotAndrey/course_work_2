@@ -11,6 +11,6 @@ namespace MusicSchoolEF.Repositories.Interfaces
 		Task EditAsync(StudentNodeConnection editingSnc, int? mark, string? comment);
 		Task AddAsync(StudentNodeConnection studentNodeConnection);
 		Task RemoveAsync(StudentNodeConnection studentNodeConnection);
-		Task UpdateTable(List<StudentViewModel> students, List<Node> nodeAndDescendants);
+		Task UpdateTable(List<StudentCheckBoxViewModel> students, List<Node> nodeAndDescendants);
 	}
 }

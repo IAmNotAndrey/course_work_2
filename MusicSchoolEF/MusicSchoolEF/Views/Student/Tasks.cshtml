@@ -7,55 +7,61 @@
 @model TreeNode<StudentNodeConnection>
 
 @{
-    ViewData["Title"] = "Tasks";
+	ViewData["Title"] = "Tasks";
 }
 
 <h1 class="display-4 text-center">Tasks</h1>
 
 <div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card bg-light">
-            <div class="card-body">
-                <h3 class="card-title">Дерево</h3>
-                <ul class="treeline list-group list-group-flush">
-                    @Html.Raw(TreeRender.RenderTree(Model, "Задания"))
-                </ul>
-            </div>
-            <button class="btn btn-secondary">Отчёт</button>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="card bg-light">
-            <div class="card-body">
-                <h3 class="card-title">Информация о вершине</h3>
-                <p><strong>Название вершины:</strong> <span id="node-name"></span></p>
-                <p><strong>Описание вершины:</strong> <span id="node-description"></span></p>
-                <p><strong>Оценка:</strong> <span id="node-mark"></span></p>
-                <p><strong>Комментарий:</strong> <span id="node-comment"></span></p>
-                <p><strong>Преподаватель:</strong> <span id="node-teacher_name"></span></p>
-            </div>
-        </div>
-    </div>
+	<div class="col-md-6">
+		<div class="card bg-light">
+			<div class="card-body">
+				<h3 class="card-title">Дерево</h3>
+				<ul class="treeline list-group list-group-flush">
+					@Html.Raw(TreeRender.RenderTree(Model, "Задания"))
+				</ul>
+			</div>
+			<button id="report-button" class="btn btn-secondary">Отчёт</button>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="card bg-light">
+			<div class="card-body">
+				<h3 class="card-title">Информация о вершине</h3>
+				<p><strong>Название вершины:</strong> <span id="node-name"></span></p>
+				<p><strong>Описание вершины:</strong> <span id="node-description"></span></p>
+				<p><strong>Оценка:</strong> <span id="node-mark"></span></p>
+				<p><strong>Комментарий:</strong> <span id="node-comment"></span></p>
+				<p><strong>Преподаватель:</strong> <span id="node-teacher_name"></span></p>
+			</div>
+		</div>
+	</div>
 </div>
 
-<!-- Обработка нажатия по элементу дерева -->
 <script>
-    $(document).ready(function () {
-        $('.treeline').on('click', '.tree-node', function (event) {
-            event.stopPropagation();
+	$(document).ready(function () {
+		// Обработка нажатия по элементу дерева
+		$('.treeline').on('click', '.tree-node', function (event) {
+			event.stopPropagation();
 
-            var node = $(this);
-            var nodeName = node.data('nodename');
-            var nodeDescription = node.data('nodedescription');
-            var nodeMark = node.data('nodemark');
-            var nodeComment = node.data('nodecomment');
-            var teacherName = node.data('nodeteachername');
+			var node = $(this);
+			var nodeName = node.data('nodename');
+			var nodeDescription = node.data('nodedescription');
+			var nodeMark = node.data('nodemark');
+			var nodeComment = node.data('nodecomment');
+			var teacherName = node.data('nodeteachername');
 
-            $('#node-name').text(nodeName);
-            $('#node-description').text(nodeDescription);
-            $('#node-mark').text(nodeMark);
-            $('#node-comment').text(nodeComment);
-            $('#node-teacher_name').text(teacherName);
-        });
-    });
+			$('#node-name').text(nodeName);
+			$('#node-description').text(nodeDescription);
+			$('#node-mark').text(nodeMark);
+			$('#node-comment').text(nodeComment);
+			$('#node-teacher_name').text(teacherName);
+		});
+		// Обработка нажатия на кнопку "Отчёт"
+		$('#report-button').click(function () {
+			var downloadLink = '@Url.Action("GenerateReport", "Student")';
+			// Имитируем клик по ссылке для запуска скачивания файла
+			window.location.href = downloadLink;
+		});
+	});
 </script>

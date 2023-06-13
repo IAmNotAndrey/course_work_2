@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Proxies;
 
 namespace MusicSchoolEF.Models.Db;
 
@@ -30,7 +31,7 @@ public partial class Ms2Context : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder
-            //.UseLazyLoadingProxies() 
+            .UseLazyLoadingProxies() 
             .UseMySql("server=localhost;port=3306;user=root;password=root;database=ms_2", ServerVersion.Parse("5.7.24-mysql"));
 
     }

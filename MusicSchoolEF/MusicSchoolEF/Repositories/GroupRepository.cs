@@ -16,6 +16,8 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<Group>> GetAllGroupsAsync()
 		{
 			return await _dbContext.Groups
+				//.Include(g => g.Students)
+				//.ThenInclude(s => s.StudentNodeConnections)
 				.ToListAsync();
 		}
 	}

@@ -27,7 +27,7 @@ public partial class Node
 
     public static List<Node> GetNodeAndDescendants(Node parent)
     {
-        List<Node> nodes = new List<Node>();
+        List<Node> nodes = new();
         GetNodeAndDescendantsRecursive(parent, ref nodes);
         return nodes;
     }

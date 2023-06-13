@@ -29,7 +29,6 @@
 <!-- Список КОРНЕВЫХ заданий для выбранного студента -->
 <div>
 	<ul id="student-task-tree" class="treeline">
-
 	</ul>
 </div>
 
@@ -43,6 +42,7 @@
 
 <div>
 	<button id="editButton" class="btn btn-primary">Редактировать</button>
+	<button id="report-button" class="btn btn-secondary">Отчёт</button>
 </div>
 
 <script src="~/js/clear_local_storage.js"></script>
@@ -103,7 +103,14 @@
 			var selectedNodeId = localStorage.getItem('selectedNodeId');
 
 			// Перенаправляемся на форму редактирования задания
-			window.location.href = '@Url.Action("EditStudentTask", "Teacher")?studentId='+selectedStudentId+'&nodeId='+selectedNodeId 
+			window.location.href = '@Url.Action("EditStudentTask", "Teacher")?studentId=' + selectedStudentId + '&nodeId=' + selectedNodeId
+		});
+		// Обработка нажатия на кнопку "Отчёт"
+		$('#report-button').click(function () {
+			var selectedStudentId = localStorage.getItem('selectedStudentId');
+			var downloadLink = '@Url.Action("GenerateStudentTaskReport", "Teacher")';
+			// Имитируем клик по ссылке для запуска скачивания файла
+			window.location.href = downloadLink + '?studentId=' + selectedStudentId;
 		});
 	});
 </script>

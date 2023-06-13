@@ -6,12 +6,15 @@ using MusicSchoolEF.Models.ViewModels;
 using MusicSchoolEF.Helpers.HtmlStrings.TreeRenders;
 using Microsoft.AspNetCore.Authorization;
 using MusicSchoolEF.Repositories.Interfaces;
+using MusicSchoolEF.Helpers.ReportBuilders;
+using OfficeOpenXml;
+using System.Threading.Tasks;
 
 namespace MusicSchoolEF.Controllers
 {
 	[Authorize(Roles = $"{Roles.Admin}, {Roles.Teacher}")]
 	[Route("Teacher/{id:int}/{action=Index}")]
-	public class TeacherController : Controller
+    public class TeacherController : Controller
 	{
 		//private readonly Ms2Context _dbContext;
 		private readonly IUserRepository _userRepository;
@@ -271,33 +274,31 @@ namespace MusicSchoolEF.Controllers
 
 			Node task = await _nodeRepository.GetNodeByIdAsync(taskId.Value)
 				?? throw new NullReferenceException();
-
-			List<User> students = await _studentRepository.GetAllStudentsAsync();
-
-			List<Group> groups = await _groupRepository.GetAllGroupsAsync();
+			// Находим всех студентов и сортируем по ФИО
+			List<User> students = await _userRepository.GetSortedUsersByFullNameAsync(
+				await _studentRepository.GetAllStudentsAsync()
+			);
 
 			// Создание ViewModel и заполнение списков
-			var viewModel = new TaskAssignmentViewModel
+			var viewModel = new StudentTaskAssignmentViewModel
 			{
 				Task = task,
-				Students = students.Select(s => new StudentViewModel
-				{
+				Students = students.Select(s => new StudentCheckBoxViewModel
+                {
 					Id = s.Id,
 					Name = $"{s.Surname} {s.FirstName} {s.Patronymic}",
 					// Устанавливаем, привязано ли к студенту текущее задание
 					IsChecked = s.StudentNodeConnections.Any(n => n.NodeNavigation.Id == taskId)
-				}).ToList()
-			};
+				}).ToList(),
+            };
 
-			// todo сделать представление с логикой
 			return View(viewModel);
 		}
-
-		[HttpPost]
-		public async Task<IActionResult> AssignTask(TaskAssignmentViewModel model)
+        [HttpPost]
+		public async Task<IActionResult> AssignTask(StudentTaskAssignmentViewModel model)
 		{
 			// Получить состояние чекбоксов студентов из модели
-			List<StudentViewModel> students = model.Students;
+			List<StudentCheckBoxViewModel> students = model.Students;
 
 			Node task = await _nodeRepository.GetNodeByIdAsync(model.Task.Id)
 				?? throw new NullReferenceException();
@@ -309,6 +310,69 @@ namespace MusicSchoolEF.Controllers
 			return RedirectToAction("TaskAssignment");
 		}
 
-		#endregion
-	}
+		[HttpGet]
+		public async Task<IActionResult> AssignGroupTask(uint? taskId)
+		{
+            if (!taskId.HasValue)
+            {
+                TempData["ErrorMessage"] = "Ошибка: не выбрано задание.";
+                return RedirectToAction("TaskAssignment");
+            }
+
+            Node task = await _nodeRepository.GetNodeByIdAsync(taskId.Value)
+                ?? throw new NullReferenceException();
+
+            List<Group> groups = await _groupRepository.GetAllGroupsAsync();
+
+            // Создание ViewModel и заполнение списков
+            var viewModel = new GroupTaskAssignmentViewModel
+            {
+                Task = task,
+                Groups = groups.Select(g => new GroupCheckBoxViewModel
+                {
+                    Name = g.Name,
+					StudentIds = g.Students.Select(s => s.Id).ToList(),
+                    // Устанавливаем, привязано ли к студенту текущее задание
+					State = g.Students.All(s => s.StudentNodeConnections.Any(snc => snc.Node == taskId)) 
+						? 1 // Все ученики привязаны
+						: (g.Students.Any(s => s.StudentNodeConnections.Any(snc => snc.Node == taskId))
+							? 0 // Некоторые привязаны
+							: -1) // Никто не привязан
+                }).ToList(),
+            };
+
+            return View(viewModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AssignGroupTask(GroupTaskAssignmentViewModel model)
+        {
+            // Получить состояний групп из модели
+			List<GroupCheckBoxViewModel> groupModels = model.Groups;
+
+            Node task = await _nodeRepository.GetNodeByIdAsync(model.Task.Id)
+                ?? throw new NullReferenceException();
+            // Находим всех потомков данного задания
+            List<Node> nodeAndDescendants = Node.GetNodeAndDescendants(task);
+			// Устанавливаем `IsChecked` для студентов
+			List<StudentCheckBoxViewModel> students = StudentCheckBoxViewModel.GetStudentCheckBoxListByGroups(groupModels);
+
+			await _studentNodeConnectionRepository.UpdateTable(students, nodeAndDescendants);
+
+			return RedirectToAction("TaskAssignment");
+        }
+
+        #endregion
+
+        [HttpGet]
+        public IActionResult GenerateStudentTaskReport(uint? studentId)
+        {
+            if (!studentId.HasValue)
+            {
+                TempData["ErrorMessage"] = "Ошибка: не выбран ученик.";
+                return RedirectToAction("TaskAssessment", "Teacher");
+            }
+
+			return RedirectToAction("GenerateReport", "Student", new { id = studentId.Value });
+        }
+    }
 }

@@ -17,7 +17,7 @@ namespace MusicSchoolEF.Controllers
             _dbContext = dbContext;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(uint id)
         {
             var students = await _dbContext.Users
                 .Where(u => u.Role == Roles.Student)

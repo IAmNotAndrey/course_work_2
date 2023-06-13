@@ -21,9 +21,16 @@ public partial class User
 
     public virtual ICollection<Node> Nodes { get; set; } = new List<Node>();
 
-    public virtual Role RoleNavigation { get; set; } = null!;
+    public virtual Role? RoleNavigation { get; set; } = null!;
 
     public virtual ICollection<StudentNodeConnection> StudentNodeConnections { get; set; } = new List<StudentNodeConnection>();
 
     public virtual ICollection<Group> Groups { get; set; } = new List<Group>();
+
+    public string FullName => GetFullName();
+
+    private string GetFullName()
+    {
+        return $"{Surname} {FirstName} {Patronymic}";
+    }
 }

@@ -16,7 +16,7 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<Node>> GetNodesByOwnerIdAsync(uint ownerId)
         {
             List<Node> allTeacherTasks = await _dbContext.Nodes
-                .Include(node => node.InverseParentNavigation) // Подключаем детей у задания
+                //.Include(node => node.InverseParentNavigation) // Подключаем детей у задания
                 .Where(node => node.Owner == ownerId)
 				.ToListAsync();
 
@@ -26,7 +26,7 @@ namespace MusicSchoolEF.Repositories
         public async Task<Node?> GetNodeByIdAsync(uint nodeId)
         {
 			return await _dbContext.Nodes
-				.Include(n => n.InverseParentNavigation)
+				//.Include(n => n.InverseParentNavigation)
 				.SingleOrDefaultAsync(n => n.Id == nodeId);
 		}
 
@@ -47,7 +47,7 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<Node>> GetNodesByOwnerAndParentAsync(uint ownerId, uint? parentId)
 		{
 			return await _dbContext.Nodes
-				.Include(n => n.InverseParentNavigation)
+				//.Include(n => n.InverseParentNavigation)
 				.Where(n => n.Owner == ownerId && n.Parent == parentId)
 				.ToListAsync(); 
 		}

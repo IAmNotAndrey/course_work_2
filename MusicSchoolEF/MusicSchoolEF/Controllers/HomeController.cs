@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 namespace MusicSchoolEF.Controllers
 {
-	public class HomeController : Controller
+    public class HomeController : Controller
 	{
 		private readonly ILogger<HomeController> _logger;
 

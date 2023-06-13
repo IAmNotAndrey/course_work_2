@@ -34,7 +34,8 @@
 </div>
 
 <div>
-	<button id="assignButton" class="btn btn-primary">Назначить</button>
+	<button id="assignButton" class="btn btn-primary">Назначить учащимся</button>
+	<button id="groupAssignButton" class="btn btn-primary">Назначить группам</button>
 </div>
 
 <script src="~/js/clear_local_storage.js"></script>
@@ -55,13 +56,22 @@
 			localStorage.setItem('selectedNodeId', selectedNodeId);
 		});
 
-		// Обработка нажатия на кнопку "Назначить"
+		// Обработка нажатия на кнопку "Назначить учащимся"
 		$('#assignButton').on('click', function () {
 			// Получение выбранного ID из Local Storage
 			var selectedNodeId = localStorage.getItem('selectedNodeId');
 
 			// Переход на метод контроллера "EditTask" с передачей ID в URL-адресе
 			window.location.href = '@Url.Action("AssignTask", "Teacher")?taskId=' + selectedNodeId;
+		});
+
+		// Обработка нажатия на кнопку "Назначить группам"
+		$('#groupAssignButton').on('click', function () {
+			// Получение выбранного ID из Local Storage
+			var selectedNodeId = localStorage.getItem('selectedNodeId');
+
+			// Переход на метод контроллера "EditTask" с передачей ID в URL-адресе
+			window.location.href = '@Url.Action("AssignGroupTask", "Teacher")?taskId=' + selectedNodeId;
 		});
 	});
 </script>
