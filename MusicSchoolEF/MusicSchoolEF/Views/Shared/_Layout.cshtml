@@ -1,6 +1,21 @@
-﻿@using MusicSchoolEF.Models.Defaults;
+﻿@using MusicSchoolEF.Models.Defaults
+@{
+    var isUserAuthenticated = User.Identity!.IsAuthenticated;
+    var userId = Context.Request.Cookies["UserId"];
+    var isUserAdmin = User.IsInRole(Roles.Admin);
+    var isUserTeacher = User.IsInRole(Roles.Teacher);
+    var isUserStudent = User.IsInRole(Roles.Student);
+
+    var isUserOnStudentPage = ViewContext.RouteData.Values["controller"]?.ToString() == "Student";
+    var isUserOnTeacherPage = ViewContext.RouteData.Values["controller"]?.ToString() == "Teacher";
+    var isUserOnAdminPage = ViewContext.RouteData.Values["controller"]?.ToString() == "Admin";
+
+    var showDefaultStudentMenu = isUserStudent || (isUserAdmin && isUserOnStudentPage);
+    var showDefaultTeacherMenu = isUserTeacher || (isUserAdmin && isUserOnTeacherPage);
+}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,37 +52,67 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Конфиденциальность</a>
                         </li>
-                        @if (User.Identity!.IsAuthenticated)
-                        {
-                            var userId = Context.Request.Cookies["UserId"];
 
-                            if (User.IsInRole(Roles.Student))
+                        @if (showDefaultStudentMenu)
+                        {
+                            if (isUserStudent)
                             {
                                 <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Student", new { id = userId })">Главная</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Tasks", "Student", new { id = userId })">Занятия</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Tasks", "Student", new { id = userId })">Задачи</a></li>
                             }
-                            else if (User.IsInRole(Roles.Teacher))
+                            else
+                            {
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Student")">Главная</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Tasks", "Student")">Задачи</a></li>
+                            }
+                        }
+
+                        @if (showDefaultTeacherMenu)
+                        {
+                            if (isUserTeacher)
                             {
                                 <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Teacher", new { id = userId })">Главная</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Tasks", "Teacher", new { id = userId })">Занятия</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("TaskAssessment", "Teacher", new { id = userId })">Оценка занятий</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("TaskAssignment", "Teacher", new { id = userId })">Назначение занятий</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Tasks", "Teacher", new { id = userId })">Задачи</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("TaskAssessment", "Teacher", new { id = userId })">Оценивание</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("TaskAssignment", "Teacher", new { id = userId })">Назначение</a></li>
                             }
-                            else if (User.IsInRole(Roles.Admin))
+                            else
                             {
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Admin", new { id = userId })">Главная</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Groups")">Группы</a></li>
-                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Users")">Пользователи</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Teacher")">Главная</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Tasks", "Teacher")">Задачи</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("TaskAssessment", "Teacher")">Оценивание</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("TaskAssignment", "Teacher")">Назначение</a></li>
                             }
+                        }
 
-                            <li class="nav-item ml-auto">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Выход</a>
+                        @if ( isUserAdmin && (showDefaultStudentMenu || showDefaultTeacherMenu))
+                        {
+                            <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Admin", new { id = userId })">На страницу админа</a></li>
+                        }
+                        else
+                        {
+                            @if (isUserAdmin)
+                            {
+                            <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Admin", new { id = userId })">Главная</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Users")">Пользователи</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark" href="@Url.Action("Index", "Groups")">Группы</a></li>
+                            }
+                        }
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        @if (isUserAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <form id="logoutForm" asp-controller="Account" asp-action="Logout" asp-area="">
+                                    <button type="submit" class="nav-link btn btn-link text-dark">Выйти</button>
+                                </form>
                             </li>
                         }
                         else
                         {
-                            <li class="nav-item ml-auto">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Вход</a>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark btn btn-light" asp-controller="Account" asp-action="Login">Войти</a>
                             </li>
                         }
                     </ul>
