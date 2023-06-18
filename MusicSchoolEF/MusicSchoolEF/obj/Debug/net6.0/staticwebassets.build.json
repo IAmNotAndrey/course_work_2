@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "thjjUZ5xgc0r1Sh8RQsqajLPQWCom5O7MKY5CtWeQUs=",
+  "Hash": "wkqkXXQByyRRdGyQfiVIFKKCxOBVVtpJVYsb9FhKa8c=",
   "Source": "MusicSchoolEF",
   "BasePath": "_content/MusicSchoolEF",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\styles1.css",
+      "SourceId": "MusicSchoolEF",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\",
+      "BasePath": "_content/MusicSchoolEF",
+      "RelativePath": "css/styles1.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles1.css"
     },
     {
       "Identity": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\tree.css",

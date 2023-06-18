@@ -7,17 +7,17 @@
 <h1>Главная</h1>
 
 <p>
-    <a asp-action="Create">Создать нового</a>
+    <a asp-action="Create">Создать пользователя</a>
 </p>
 <table class="table">
     <thead>
         <tr>
             <!--
             <th>
-                @Html.DisplayNameFor(model => model.FirstName)
+                @Html.DisplayNameFor(model => model.Surname)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Surname)
+                @Html.DisplayNameFor(model => model.FirstName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Patronymic)
@@ -33,10 +33,10 @@
             </th>
             -->
             <th>
-                @Html.DisplayName("Имя")
+                @Html.DisplayName("Фамилия")
             </th>
             <th>
-                @Html.DisplayName("Фамилия")
+                @Html.DisplayName("Имя")
             </th>
             <th>
                 @Html.DisplayName("Отчество")
@@ -57,10 +57,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
+                @Html.DisplayFor(modelItem => item.Surname)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Surname)
+                @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Patronymic)
@@ -75,9 +75,9 @@
                 @Html.DisplayFor(modelItem => item.RoleNavigation.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Редактировать</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Детали</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id">Изменить</a>
+                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Детали</a>
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
             </td>
         </tr>
 }

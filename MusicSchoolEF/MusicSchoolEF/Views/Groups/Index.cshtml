@@ -7,7 +7,7 @@
 <h1>Главная</h1>
 
 <p>
-    <a asp-action="Create">Создать новую</a>
+    <a asp-action="Create">Создать группу</a>
 </p>
 <table class="table">
     <thead>
@@ -22,9 +22,9 @@
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Name">Редактировать</a> |
-                <a asp-action="Details" asp-route-id="@item.Name">Детали</a> |
-                <a asp-action="Delete" asp-route-id="@item.Name">Удалить</a>
+                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Name">Изменить</a>
+                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Name">Детали</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Name">Удалить</a>
             </td>
         </tr>
 }
