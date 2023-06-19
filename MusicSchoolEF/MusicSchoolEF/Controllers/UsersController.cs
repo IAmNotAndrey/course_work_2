@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Helpers;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Models.Defaults;
+using static MusicSchoolEF.Repositories.UserRepositoryExtensions;
 
 namespace MusicSchoolEF.Controllers
 {
@@ -25,8 +26,8 @@ namespace MusicSchoolEF.Controllers
         // GET: Users
         public async Task<IActionResult> Index()
         {
-            var ms2Context = _context.Users.Include(u => u.RoleNavigation);
-            return View(await ms2Context.ToListAsync());
+            var users = _context.Users.GetSortedUsersByFullName();
+            return View(await users.ToListAsync());
         }
 
         // GET: Users/Details/5
@@ -171,6 +172,23 @@ namespace MusicSchoolEF.Controllers
         private bool UserExists(uint id)
         {
           return (_context.Users?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        public IActionResult Search(string query)
+        {
+            if (string.IsNullOrEmpty(query))
+                return RedirectToAction("Index");
+
+            query = query.MyTrim().ToLower();
+
+            List<User> studentsAndTeachers = _context.Users
+                .AsEnumerable()
+                .Where(u => u.AllText.ToLower().Contains(query))
+                .AsQueryable()
+                .GetSortedUsersByFullName()
+                .ToList();
+
+            return View("Index", studentsAndTeachers);
         }
     }
 }

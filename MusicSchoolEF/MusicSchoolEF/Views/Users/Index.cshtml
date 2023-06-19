@@ -9,6 +9,15 @@
 <p>
     <a asp-action="Create">Создать пользователя</a>
 </p>
+
+<h1>Поиск</h1>
+<form method="get" action="@Url.Action("Search", "Users")">
+    <div class="form-group">
+        <input type="text" name="query" class="form-control" placeholder="Введите текст" />
+    </div>
+    <button type="submit" class="btn btn-primary">Найти</button>
+</form>
+
 <table class="table">
     <thead>
         <tr>

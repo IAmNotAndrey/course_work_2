@@ -1,6 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.EntityFrameworkCore;
 using MusicSchoolEF.Models.Db;
 using MusicSchoolEF.Repositories.Interfaces;
+using System.Collections.Generic;
 
 namespace MusicSchoolEF.Repositories
 {
@@ -25,16 +27,23 @@ namespace MusicSchoolEF.Repositories
 				.SingleOrDefaultAsync(u => u.Id == userId);
 		}
 
-		public async Task<List<User>> GetSortedUsersByFullNameAsync(List<User> users)
+		public IQueryable<User> GetSortedUsersByFullName(IQueryable<User> users)
 		{
-			return await Task.Run(() =>
-			{
-				return users
-					.OrderBy(s => s.Surname)
-					.ThenBy(s => s.FirstName)
-					.ThenBy(s => s.Patronymic)
-					.ToList();
-			});
+			return users
+				.OrderBy(s => s.Surname)
+				.ThenBy(s => s.FirstName)
+				.ThenBy(s => s.Patronymic);
+		}
+	}
+
+	public static class UserRepositoryExtensions
+	{
+		private static readonly IUserRepository _userRepository = new UserRepository(new Ms2Context());
+
+		public static IQueryable<User> GetSortedUsersByFullName(this IQueryable<User> users)
+		{
+			return _userRepository
+				.GetSortedUsersByFullName(users);
 		}
 	}
 }

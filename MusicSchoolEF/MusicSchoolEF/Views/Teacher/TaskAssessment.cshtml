@@ -28,7 +28,7 @@
 <h1>StudentTaskList</h1>
 <!-- Список КОРНЕВЫХ заданий для выбранного студента -->
 <div>
-	<ul id="student-task-tree" class="treeline">
+	<ul id="student-task-tree" class="treeline list-group list-group-flush">
 	</ul>
 </div>
 
@@ -45,9 +45,12 @@
 	<button id="report-button" class="btn btn-secondary">Отчёт</button>
 </div>
 
-<script src="~/js/clear_local_storage.js"></script>
+<!--<script src="~/js/clear_local_storage.js"></script>-->
 <script>
 	$(document).ready(function () {
+		// Очистка local storage
+		localStorage.clear();
+
 		// Обработка клика по студенту в списке
 		$('.student-node').click(function () {
 			// Очищаем содержимое treeline
@@ -108,7 +111,7 @@
 		// Обработка нажатия на кнопку "Отчёт"
 		$('#report-button').click(function () {
 			var selectedStudentId = localStorage.getItem('selectedStudentId');
-			var downloadLink = '@Url.Action("GenerateStudentTaskReport", "Teacher")';
+			var downloadLink = '@Url.Action("TryGenerateStudentTaskReport", "Teacher")';
 			// Имитируем клик по ссылке для запуска скачивания файла
 			window.location.href = downloadLink + '?studentId=' + selectedStudentId;
 		});

@@ -1,14 +1,25 @@
-﻿@using MusicSchoolEF.Models.Db;
-@model (List<User> Students, List<User> Teachers)
+﻿@using MusicSchoolEF.Models.Defaults;
+@using MusicSchoolEF.Models.Db;
+@model IQueryable<User>
 
 @{
 	ViewData["Title"] = "Главная";
+	var teachers = Model.Where(u => u.Role == Roles.Teacher);
+	var students = Model.Where(u => u.Role == Roles.Student);
 }
+
+<h1>Поиск</h1>
+<form method="get" action="@Url.Action("Search", "Admin")">
+	<div class="form-group">
+		<input type="text" name="query" class="form-control" placeholder="Введите ФИО" />
+	</div>
+	<button type="submit" class="btn btn-primary">Найти</button>
+</form>
 
 <div>
 	<h1>Преподаватели</h1>
 	<ul class="list-group">
-		@foreach (var t in Model.Teachers)
+		@foreach (var t in teachers)
 		{
 			<li class="list-group-item">
 				<a href="@Url.Action("Index", "Teacher", new { id = t.Id })">@t.FullName</a>
@@ -20,7 +31,7 @@
 <div>
 	<h1>Ученики</h1>
 	<ul class="list-group">
-		@foreach (var s in Model.Students)
+		@foreach (var s in students)
 		{
 			<li class="list-group-item">
 				<a href="@Url.Action("Index", "Student", new { id = s.Id })">@s.FullName</a>

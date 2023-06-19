@@ -6,6 +6,6 @@ namespace MusicSchoolEF.Repositories.Interfaces
 	{
 		Task<User?> GetUserByLoginAsync(string login);
 		Task<User?> GetUserByIdAsync(uint userId);
-		Task<List<User>> GetSortedUsersByFullNameAsync(List<User> users);
+		IQueryable<User> GetSortedUsersByFullName(IQueryable<User> users);
 	}
 }

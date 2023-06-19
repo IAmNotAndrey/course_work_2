@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MusicSchoolEF.Models.Db;
 
@@ -27,10 +29,17 @@ public partial class User
 
     public virtual ICollection<Group> Groups { get; set; } = new List<Group>();
 
-    public string FullName => GetFullName();
+	public string FullName => _GetFullName();
 
-    private string GetFullName()
+    public string AllText => _GetAllText();
+
+    private string _GetFullName()
     {
         return $"{Surname} {FirstName} {Patronymic}";
+    }
+
+    private string _GetAllText()
+    {
+        return $"{_GetFullName()} {Role} {Login} {Password}";
     }
 }

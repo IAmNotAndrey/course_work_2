@@ -9,6 +9,7 @@ using MusicSchoolEF.Repositories.Interfaces;
 using MusicSchoolEF.Helpers.ReportBuilders;
 using OfficeOpenXml;
 using System.Threading.Tasks;
+using static MusicSchoolEF.Repositories.UserRepositoryExtensions;
 
 namespace MusicSchoolEF.Controllers
 {
@@ -173,9 +174,11 @@ namespace MusicSchoolEF.Controllers
 		{
 			// Поиск всех учеников, которым заданы задания, создателем которых является авторизованный учитель
 			// + Сортируем их по ФИО
-			List<User> allStudents = await _userRepository.GetSortedUsersByFullNameAsync(
-				await _studentRepository.GetStudentsAssignedTasksByTeacherAsync(id)
-			);
+			var allStudents = (
+				(IQueryable<User>)
+				await _studentRepository
+				.GetStudentsAssignedTasksByTeacherAsync(id))
+				.GetSortedUsersByFullName();
 
 			//// Создаём пару (студент-его дерево заданий)
 			//var pairs = new List<(User Student, TreeNode<StudentNodeConnection> Tree)>();
@@ -197,7 +200,7 @@ namespace MusicSchoolEF.Controllers
 		[HttpGet]
 		public async Task<string> GetStudentTaskTree(uint id, uint studentId)
 		{
-			// Находим все задание студента, создателем которого является авториизированный учитель 
+			// Находим все задание студента, создателем которого является авторизованный учитель 
 			List<StudentNodeConnection> allTasks = await _studentNodeConnectionRepository
 				.GetStudentNodeConnectionsByStudentIdAndTeacherIdAsync(studentId, id);
 
@@ -275,9 +278,10 @@ namespace MusicSchoolEF.Controllers
 			Node task = await _nodeRepository.GetNodeByIdAsync(taskId.Value)
 				?? throw new NullReferenceException();
 			// Находим всех студентов и сортируем по ФИО
-			List<User> students = await _userRepository.GetSortedUsersByFullNameAsync(
-				await _studentRepository.GetAllStudentsAsync()
-			);
+			var students = 
+				((IQueryable<User>)
+				await _studentRepository.GetAllStudentsAsync())
+				.GetSortedUsersByFullName();
 
 			// Создание ViewModel и заполнение списков
 			var viewModel = new StudentTaskAssignmentViewModel
@@ -364,7 +368,7 @@ namespace MusicSchoolEF.Controllers
         #endregion
 
         [HttpGet]
-        public IActionResult GenerateStudentTaskReport(uint? studentId)
+        public IActionResult TryGenerateStudentTaskReport(uint? studentId)
         {
             if (!studentId.HasValue)
             {
@@ -372,7 +376,7 @@ namespace MusicSchoolEF.Controllers
                 return RedirectToAction("TaskAssessment", "Teacher");
             }
 
-			return RedirectToAction("GenerateReport", "Student", new { id = studentId.Value });
+			return RedirectToAction("GenerateStudentReport", "Report", new { id = studentId.Value });
         }
     }
 }
