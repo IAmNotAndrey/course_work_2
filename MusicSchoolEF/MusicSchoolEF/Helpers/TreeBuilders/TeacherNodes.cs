@@ -27,7 +27,7 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
 				{
 					// Ищем все корневые вершины: у которых `Node`.`Parent` = (null или вершине, которой нет в `collection`)
 					if (node.Parent == null
-						|| !collection.Where(_node => _node.Id == node.Parent).Any())
+						|| !collection.Where(_node => _node.Id == node.ParentId).Any())
 					{
 						// Заполняем первый уровень дерева
 						var childTreeNode = new TreeNode<Node>(node);
@@ -42,7 +42,7 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
 			// Принимаем родителя, Value которого не может быть `null`, т.к. выше идёт проверка в условии `if`
 			var parent = treeNode.Value!;
 			// Проходимся по его детям в представлении `Node` и добавляем в `treeNode`.`Children` всех, кто есть в `collection`
-			foreach (Node child in parent.InverseParentNavigation)
+			foreach (Node child in parent.InverseParent)
 			{
 				var found_child = collection.SingleOrDefault(snc => snc.Id == child.Id);
 				if (found_child != null)

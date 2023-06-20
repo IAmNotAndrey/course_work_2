@@ -42,11 +42,11 @@ namespace MusicSchoolEF.Helpers.ReportBuilders
                 string space = "  ";
 				space = String.Concat(Enumerable.Repeat(space, level));
 
-				worksheet.Cells[rowIndex, 1].Value = space + snc.NodeNavigation.Name;
-                worksheet.Cells[rowIndex, 2].Value = snc.NodeNavigation.Description;
+				worksheet.Cells[rowIndex, 1].Value = space + snc.Node.Name;
+                worksheet.Cells[rowIndex, 2].Value = snc.Node.Description;
                 worksheet.Cells[rowIndex, 3].Value = snc.Mark;
                 worksheet.Cells[rowIndex, 4].Value = snc.Comment;
-                worksheet.Cells[rowIndex, 5].Value = snc.NodeNavigation.OwnerNavigation.FullName;
+                worksheet.Cells[rowIndex, 5].Value = snc.Node.OwnerNavigation.FullName;
 
                 rowIndex++;
             }

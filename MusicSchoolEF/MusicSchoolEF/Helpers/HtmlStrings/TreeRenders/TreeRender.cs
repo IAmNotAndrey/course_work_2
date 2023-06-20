@@ -11,14 +11,14 @@ namespace MusicSchoolEF.Helpers.HtmlStrings.TreeRenders
             {
                 var snc = node.Value;
                 // Название для корневого элемента дерева, который выступает в роли заглушки
-                string nodeName = snc?.NodeNavigation.Name ?? rootName;
-                uint? nodeId = snc?.Node;
-                string nodeDescription = snc?.NodeNavigation.Description ?? "";
+                string nodeName = snc?.Node.Name ?? rootName;
+                uint? nodeId = snc?.NodeId;
+                string nodeDescription = snc?.Node.Description ?? "";
                 string nodeMark = snc?.Mark.ToString() ?? "";
                 string nodeComment = snc?.Comment ?? "";
                 
                 string teacherFullName = "";
-                User? teacher = snc?.NodeNavigation.OwnerNavigation;
+                User? teacher = snc?.Node.OwnerNavigation;
                 if (teacher != null)
                     teacherFullName += $"{teacher.Surname} {teacher.FirstName} {teacher.Patronymic}";
 

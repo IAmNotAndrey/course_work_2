@@ -2,7 +2,7 @@
 
 namespace MusicSchoolEF.Repositories.Interfaces
 {
-	public interface IGroupRepository
+    public interface IGroupRepository
 	{
 		Task<List<Group>> GetAllGroupsAsync();
 	}

@@ -58,7 +58,7 @@ namespace MusicSchoolEF.Controllers
 			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
 				new ClaimsPrincipal(result));
 
-			return RedirectToUserRole(user.Role, user.Id);
+			return RedirectToUserRole(user.Role.Name, user.Id);
 		}
 
         public async Task<IActionResult> Logout()
@@ -72,7 +72,7 @@ namespace MusicSchoolEF.Controllers
             var claims = new List<Claim>()
             {
                 new Claim(ClaimsIdentity.DefaultNameClaimType, user.Login),
-                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role),
+                new Claim(ClaimsIdentity.DefaultRoleClaimType, user.Role.Name),
             };
             return new ClaimsIdentity(claims, "ApplicationCookie",
                 ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);

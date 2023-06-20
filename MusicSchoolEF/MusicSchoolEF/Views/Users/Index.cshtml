@@ -38,7 +38,7 @@
                 @Html.DisplayNameFor(model => model.Password)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.RoleNavigation)
+                @Html.DisplayNameFor(model => model.Role)
             </th>
             -->
             <th>
@@ -81,7 +81,7 @@
                 @Html.DisplayFor(modelItem => item.Password)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.RoleNavigation.Name)
+                @Html.DisplayFor(modelItem => item.Role.Name)
             </td>
             <td>
                 <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id">Изменить</a>

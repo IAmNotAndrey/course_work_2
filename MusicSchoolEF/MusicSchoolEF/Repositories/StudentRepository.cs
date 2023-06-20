@@ -22,8 +22,8 @@ namespace MusicSchoolEF.Repositories
 			return await _dbContext.Users
 				//.Include(s => s.StudentNodeConnections)
 				//.ThenInclude(snc => snc.NodeNavigation)
-				// Ищем, привязано ли к ученику хотя бы одно задание, создаталем которого является учитель
-				.Where(s => s.StudentNodeConnections.Any(snc => snc.NodeNavigation.Owner == teacherId))
+				// Ищем, привязано ли к ученику хотя бы одно задание, создателем которого является учитель
+				.Where(s => s.StudentNodeConnections.Any(snc => snc.Node.Owner == teacherId))
 				.ToListAsync();
 		}
 
@@ -32,7 +32,7 @@ namespace MusicSchoolEF.Repositories
 			return await _dbContext.Users
 				//.Include(u => u.StudentNodeConnections)
 				//.ThenInclude(snc => snc.NodeNavigation)
-				.Where(u => u.Role == Roles.Student)
+				.Where(u => u.Role.Name == Roles.Student)
 				.ToListAsync();
 		}
 	}

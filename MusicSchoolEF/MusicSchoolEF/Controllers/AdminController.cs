@@ -31,7 +31,7 @@ namespace MusicSchoolEF.Controllers
 			//   .ToListAsync();
 
 			IQueryable<User> studentsAndTeachers = _dbContext.Users
-				.Where(u => u.Role == Roles.Teacher || u.Role == Roles.Student)
+				.Where(u => u.Role.Name == Roles.Teacher || u.Role.Name == Roles.Student)
 				.GetSortedUsersByFullName();
 
 			//var model =
@@ -60,8 +60,8 @@ namespace MusicSchoolEF.Controllers
 			//             .ToList();
 			IQueryable<User> studentsAndTeachers = _dbContext.Users
 				.AsEnumerable()
-				.Where(u => (u.Role == Roles.Student
-				|| u.Role == Roles.Teacher)
+				.Where(u => (u.Role.Name == Roles.Student
+				|| u.Role.Name == Roles.Teacher)
 				&& u.FullName.ToLower().Contains(query))
 				.AsQueryable()
 				.GetSortedUsersByFullName();

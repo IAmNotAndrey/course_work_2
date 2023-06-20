@@ -21,7 +21,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 
         options.LoginPath = "/Account/Login"; // Путь к странице входа
         options.AccessDeniedPath = "/Home/Error"; // Путь к странице с ошибкой доступа
-                                                
+
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Установка срока действия куки
     });
 

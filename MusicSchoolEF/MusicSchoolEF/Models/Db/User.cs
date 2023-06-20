@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing.Text;
 
 namespace MusicSchoolEF.Models.Db;
 
@@ -9,7 +8,7 @@ public partial class User
 {
     public uint Id { get; set; }
 
-    public string Role { get; set; } = null!;
+    public uint RoleId { get; set; }
 
     public string FirstName { get; set; } = null!;
 
@@ -23,13 +22,13 @@ public partial class User
 
     public virtual ICollection<Node> Nodes { get; set; } = new List<Node>();
 
-    public virtual Role? RoleNavigation { get; set; } = null!;
+    public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<StudentNodeConnection> StudentNodeConnections { get; set; } = new List<StudentNodeConnection>();
 
     public virtual ICollection<Group> Groups { get; set; } = new List<Group>();
 
-	public string FullName => _GetFullName();
+    public string FullName => _GetFullName();
 
     public string AllText => _GetAllText();
 
@@ -40,6 +39,6 @@ public partial class User
 
     private string _GetAllText()
     {
-        return $"{_GetFullName()} {Role} {Login} {Password}";
+        return $"{FullName} {Role.Name} {Login} {Password}";
     }
 }

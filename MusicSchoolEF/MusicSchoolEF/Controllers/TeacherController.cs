@@ -13,7 +13,7 @@ using static MusicSchoolEF.Repositories.UserRepositoryExtensions;
 
 namespace MusicSchoolEF.Controllers
 {
-	[Authorize(Roles = $"{Roles.Admin}, {Roles.Teacher}")]
+    [Authorize(Roles = $"{Roles.Admin}, {Roles.Teacher}")]
 	[Route("Teacher/{id:int}/{action=Index}")]
     public class TeacherController : Controller
 	{
@@ -129,7 +129,7 @@ namespace MusicSchoolEF.Controllers
 					Name = model.Name,
 					Owner = id,
 					Description = model.Description,
-					Parent = model.ParentId,
+					ParentId = model.ParentId,
 					Priority = model.Priority
 				};
 
@@ -226,8 +226,8 @@ namespace MusicSchoolEF.Controllers
 			{
 				TaskId = nodeId.Value,
 				StudentId = studentId.Value,
-				Name = studentTask.NodeNavigation.Name,
-				Description = studentTask.NodeNavigation.Description,
+				Name = studentTask.Node.Name,
+				Description = studentTask.Node.Description,
 				Mark = studentTask.Mark,
 				Comment = studentTask.Comment
 			};
@@ -292,7 +292,7 @@ namespace MusicSchoolEF.Controllers
 					Id = s.Id,
 					Name = $"{s.Surname} {s.FirstName} {s.Patronymic}",
 					// Устанавливаем, привязано ли к студенту текущее задание
-					IsChecked = s.StudentNodeConnections.Any(n => n.NodeNavigation.Id == taskId)
+					IsChecked = s.StudentNodeConnections.Any(n => n.NodeId == taskId)
 				}).ToList(),
             };
 
@@ -337,9 +337,9 @@ namespace MusicSchoolEF.Controllers
                     Name = g.Name,
 					StudentIds = g.Students.Select(s => s.Id).ToList(),
                     // Устанавливаем, привязано ли к студенту текущее задание
-					State = g.Students.All(s => s.StudentNodeConnections.Any(snc => snc.Node == taskId)) 
+					State = g.Students.All(s => s.StudentNodeConnections.Any(snc => snc.NodeId == taskId)) 
 						? 1 // Все ученики привязаны
-						: (g.Students.Any(s => s.StudentNodeConnections.Any(snc => snc.Node == taskId))
+						: (g.Students.Any(s => s.StudentNodeConnections.Any(snc => snc.NodeId == taskId))
 							? 0 // Некоторые привязаны
 							: -1) // Никто не привязан
                 }).ToList(),

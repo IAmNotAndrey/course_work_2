@@ -12,10 +12,12 @@
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
             <div class="form-group">
-                <label asp-for="Role" class="control-label">Роль</label>
-                <select asp-for="Role" class="form-control" asp-items="ViewBag.Role"></select>
+                <label asp-for="RoleId" class="control-label">Роль</label>
+                <select asp-for="RoleId" class="form-control" asp-items="@ViewBag.Role" value="@Model.RoleId"></select>
             </div>
+            
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label">Имя</label>
                 <input asp-for="FirstName" class="form-control" />

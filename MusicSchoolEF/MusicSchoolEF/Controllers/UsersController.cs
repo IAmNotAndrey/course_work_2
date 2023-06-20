@@ -39,7 +39,7 @@ namespace MusicSchoolEF.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.RoleNavigation)
+                .Include(u => u.Role)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {
@@ -52,16 +52,15 @@ namespace MusicSchoolEF.Controllers
         // GET: Users/Create
         public IActionResult Create()
         {
-            ViewData["Role"] = new SelectList(_context.Roles, "Name", "Name");
+            //ViewData["Role"] = new SelectList(_context.Roles, "Name", "Name");
+            ViewData["Role"] = new SelectList(_context.Roles, "Id", "Name");
             return View();
         }
 
         // POST: Users/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Role,FirstName,Surname,Patronymic,Login,Password")] User user)
+        public async Task<IActionResult> Create([Bind("RoleId,FirstName,Surname,Patronymic,Login,Password")] User user)
         {
             if (ModelState.IsValid)
             {
@@ -70,7 +69,7 @@ namespace MusicSchoolEF.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Role"] = new SelectList(_context.Roles, "Name", "Name", user.Role);
+            ViewData["Role"] = new SelectList(_context.Roles, "Id", "Name", user.RoleId);
             return View(user);
         }
 
@@ -140,7 +139,7 @@ namespace MusicSchoolEF.Controllers
             }
 
             var user = await _context.Users
-                .Include(u => u.RoleNavigation)
+                .Include(u => u.Role)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (user == null)
             {

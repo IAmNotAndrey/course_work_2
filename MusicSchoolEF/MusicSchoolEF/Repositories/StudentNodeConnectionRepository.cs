@@ -20,7 +20,7 @@ namespace MusicSchoolEF.Repositories
 				//.Include(snc => snc.NodeNavigation)
 				//.Include(snc => snc.NodeNavigation.InverseParentNavigation) // Подключение потомков
 				//.Include(snc => snc.NodeNavigation.OwnerNavigation)
-				.Where(snc => snc.Student == studentId)
+				.Where(snc => snc.StudentId == studentId)
 				.ToListAsync();
 
 			return allStudentTasks;
@@ -30,8 +30,8 @@ namespace MusicSchoolEF.Repositories
 		{
 			return await _dbContext.StudentNodeConnections
 				//.Include(snc => snc.NodeNavigation)
-				.Where(snc => snc.Student == studentId
-							&& snc.NodeNavigation.Owner == teacherId)
+				.Where(snc => snc.StudentId == studentId
+							&& snc.Node.Owner == teacherId)
 				.ToListAsync();
 		}
 
@@ -39,7 +39,7 @@ namespace MusicSchoolEF.Repositories
 		{
 			return await _dbContext.StudentNodeConnections
 				//.Include(snc => snc.NodeNavigation)
-				.SingleOrDefaultAsync(snc => snc.Student == studentId && snc.Node == nodeId);
+				.SingleOrDefaultAsync(snc => snc.StudentId == studentId && snc.NodeId == nodeId);
 		}
 
 		public async Task EditAsync(StudentNodeConnection editingSnc, int? mark, string? comment)
@@ -81,8 +81,8 @@ namespace MusicSchoolEF.Repositories
 							await AddAsync(
 								new StudentNodeConnection()
 								{
-									Node = node.Id,
-									Student = student.Id
+									NodeId = node.Id,
+									StudentId = student.Id
 								});
 						}
 					}

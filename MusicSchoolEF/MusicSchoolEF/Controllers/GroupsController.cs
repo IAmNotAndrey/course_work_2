@@ -53,7 +53,9 @@ namespace MusicSchoolEF.Controllers
         // GET: Groups/Create
         public async Task<IActionResult> Create()
         {
-            ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+            ViewBag.Students = await _context.Users
+                .Where(u => u.Role.Name == Roles.Student)
+                .ToListAsync();
             return View();
         }
 
@@ -84,13 +86,13 @@ namespace MusicSchoolEF.Controllers
                 catch (DbUpdateException)
                 {
                     TempData["ErrorMessage"] = "Ошибка: группа с таким названием уже существует";
-                    ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+                    ViewBag.Students = await _context.Users.Where(u => u.Role.Name == Roles.Student).ToListAsync();
                     return View(group);
                 }
 
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+            ViewBag.Students = await _context.Users.Where(u => u.Role.Name == Roles.Student).ToListAsync();
             return View(group);
         }
 
@@ -110,7 +112,7 @@ namespace MusicSchoolEF.Controllers
             }
 
             var students = await _context.Users
-                .Where(u => u.Role == Roles.Student)
+                .Where(u => u.Role.Name == Roles.Student)
                 .ToListAsync();
 
             ViewBag.Students = students;
@@ -167,13 +169,13 @@ namespace MusicSchoolEF.Controllers
                 {
                     group.Name = id;
                     TempData["ErrorMessage"] = "Ошибка: группа с таким названием уже существует";
-                    ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+                    ViewBag.Students = await _context.Users.Where(u => u.Role.Name == Roles.Student).ToListAsync();
                     ViewBag.GroupStudents = group.Students;
                     return View(group);
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewBag.Students = await _context.Users.Where(u => u.Role == Roles.Student).ToListAsync();
+            ViewBag.Students = await _context.Users.Where(u => u.Role.Name == Roles.Student).ToListAsync();
             ViewBag.GroupStudents = group.Students;
             return View(group);
         }

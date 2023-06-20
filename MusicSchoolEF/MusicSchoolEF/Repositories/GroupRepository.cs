@@ -4,7 +4,7 @@ using MusicSchoolEF.Repositories.Interfaces;
 
 namespace MusicSchoolEF.Repositories
 {
-	public class GroupRepository : IGroupRepository
+    public class GroupRepository : IGroupRepository
 	{
 		private readonly Ms2Context _dbContext;
 

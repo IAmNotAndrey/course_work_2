@@ -50,7 +50,7 @@ namespace MusicSchoolEF.Repositories
 		{
 			return await _dbContext.Nodes
 				//.Include(n => n.InverseParentNavigation)
-				.Where(n => n.Owner == ownerId && n.Parent == parentId)
+				.Where(n => n.Owner == ownerId && n.ParentId == parentId)
 				.ToListAsync(); 
 		}
 

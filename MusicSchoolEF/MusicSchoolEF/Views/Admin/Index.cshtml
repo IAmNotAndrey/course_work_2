@@ -4,8 +4,8 @@
 
 @{
 	ViewData["Title"] = "Главная";
-	var teachers = Model.Where(u => u.Role == Roles.Teacher);
-	var students = Model.Where(u => u.Role == Roles.Student);
+	var teachers = Model.Where(u => u.Role.Name == Roles.Teacher);
+	var students = Model.Where(u => u.Role.Name == Roles.Student);
 }
 
 <h1>Поиск</h1>
