@@ -20,10 +20,10 @@ namespace MusicSchoolEF.Helpers.HtmlStrings.TreeRenders
                 string teacherFullName = "";
                 User? teacher = snc?.Node.OwnerNavigation;
                 if (teacher != null)
-                    teacherFullName += $"{teacher.Surname} {teacher.FirstName} {teacher.Patronymic}";
+                    teacherFullName = teacher.FullName;
 
                 writer.WriteLine(
-                        $@"<li class='tree-node' 
+                        $@"<li class='tree-node'
 					data-nodeid='{nodeId}' 
 					data-nodename='{nodeName}' 
                     data-nodedescription='{nodeDescription}' 

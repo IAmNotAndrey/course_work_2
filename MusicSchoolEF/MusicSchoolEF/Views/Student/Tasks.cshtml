@@ -13,17 +13,21 @@
 <h1 class="display-4">Занятия</h1>
 
 <div class="row justify-content-center">
+
 	<div class="col-md-6">
 		<div class="card bg-light">
 			<div class="card-body">
 				<h3 class="card-title">Дерево занятий</h3>
-				<ul class="treeline list-group list-group-flush">
+				<ul class="treeline list-group">
 					@Html.Raw(TreeRender.RenderTree(Model, "Занятия"))
 				</ul>
 			</div>
-			<button id="report-button" class="btn btn-secondary">Отчёт</button>
 		</div>
 	</div>
+	<!--
+	<div id="tree">
+	</div>
+	-->
 	<div class="col-md-6">
 		<div class="card bg-light">
 			<div class="card-body">
@@ -34,9 +38,30 @@
 				<p><strong>Комментарий:</strong> <span id="node-comment"></span></p>
 				<p><strong>Преподаватель:</strong> <span id="node-teacher_name"></span></p>
 			</div>
+			<div id="btn-field">
+				<button id="report-button-xlsx" class="btn btn-success btn-report">
+					<object class="report-button-svg" type="image/svg+xml" data="~/icons/xlsx.svg" width="25" height="25">Скачать отчёт в .xlsx-формате</object>
+					.xlsx
+				</button>
+				<button id="report-button-csv" class="btn btn-success btn-report">
+					<object class="report-button-svg" type="image/svg+xml" data="~/icons/csv.svg" width="25" height="25">Скачать отчёт в .csv-формате</object>
+					.csv
+				</button>
+			</div>
 		</div>
 	</div>
 </div>
+
+<!--
+<script>
+	// var tree = [...]
+	Html.Raw(TreeRender.RenderTree(Model, "Занятия"))
+
+	$(document).ready(function () {
+		$('#tree').treeview({ data: JSON.parse(tree) });
+	});
+</script>
+-->
 
 <script>
 	$(document).ready(function () {
@@ -57,9 +82,15 @@
 			$('#node-comment').text(nodeComment);
 			$('#node-teacher_name').text(teacherName);
 		});
-		// Обработка нажатия на кнопку "Отчёт"
-		$('#report-button').click(function () {
-			var downloadLink = '@Url.Action("GenerateReport", "Student")';
+		// Обработка нажатия на кнопку ".xlsx"
+		$('#report-button-xlsx').click(function () {
+			var downloadLink = '@Url.Action("GenerateXlsxReport", "Student")';
+			// Имитируем клик по ссылке для запуска скачивания файла
+			window.location.href = downloadLink;
+		});
+		// Обработка нажатия на кнопку ".csv"
+		$('#report-button-csv').click(function () {
+			var downloadLink = '@Url.Action("GenerateCsvReport", "Student")';
 			// Имитируем клик по ссылке для запуска скачивания файла
 			window.location.href = downloadLink;
 		});

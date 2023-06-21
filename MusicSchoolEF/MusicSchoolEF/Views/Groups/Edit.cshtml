@@ -25,6 +25,7 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <fieldset>
                     <input type="hidden" name="id" value="@Model.Name" />
@@ -51,7 +52,5 @@
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

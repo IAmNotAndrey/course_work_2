@@ -34,7 +34,38 @@ namespace MusicSchoolEF.Repositories
 				.ThenBy(s => s.FirstName)
 				.ThenBy(s => s.Patronymic);
 		}
-	}
+
+        public bool DoesConsistOfSameStudents(IEnumerable<uint> studentIds1, IEnumerable<uint> studentIds2)
+        {
+			//// Получаем список Id пользователей из первой группы
+			//var usersInGroup1 = students1.Select(u => u.Id);
+
+			//// Получаем список Id пользователей из второй группы
+			//var usersInGroup2 = students2.Select(u => u.Id);
+
+			// Проверяем, содержатся ли все пользователи из первой группы во второй группе
+			//var hasSameStudents = usersInGroup1.All(id => usersInGroup2.Contains(id));
+			var hasSameStudents = studentIds1.All(id => studentIds2.Contains(id));
+
+            return hasSameStudents;
+        }
+
+        public bool DoesConsistOfSameStudents(IEnumerable<uint> studentIds1, IEnumerable<IEnumerable<uint>> otherStudentIds)
+        {
+			if (otherStudentIds.Count() == 0)
+				return false;
+
+            foreach (var otherGroup in otherStudentIds)
+            {
+                var hasSameStudents = DoesConsistOfSameStudents(studentIds1, otherGroup);
+
+                if (!hasSameStudents)
+                    return false;
+            }
+            // Если все группы содержат одних и тех же пользователей, возвращаем true
+            return true;
+        }
+    }
 
 	public static class UserRepositoryExtensions
 	{

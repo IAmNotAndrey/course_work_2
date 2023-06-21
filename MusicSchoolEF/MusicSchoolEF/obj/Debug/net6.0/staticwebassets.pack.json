@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MusicSchoolEF.bundle.scp.css"
     },
     {
+      "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\btn-report.css",
+      "PackagePath": "staticwebassets\\css\\btn-report.css"
+    },
+    {
       "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\css\\list.css",
       "PackagePath": "staticwebassets\\css\\list.css"
     },
@@ -35,6 +39,14 @@
     {
       "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\icons\\csv.svg",
+      "PackagePath": "staticwebassets\\icons\\csv.svg"
+    },
+    {
+      "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\icons\\xlsx.svg",
+      "PackagePath": "staticwebassets\\icons\\xlsx.svg"
     },
     {
       "Id": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\wwwroot\\js\\clear_local_storage.js",

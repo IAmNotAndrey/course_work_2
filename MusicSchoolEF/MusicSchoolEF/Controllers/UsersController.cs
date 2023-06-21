@@ -60,14 +60,22 @@ namespace MusicSchoolEF.Controllers
         // POST: Users/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("RoleId,FirstName,Surname,Patronymic,Login,Password")] User user)
+        public async Task<IActionResult> Create([Bind("Id,RoleId,FirstName,Surname,Patronymic,Login,Password")] User user)
         {
+            ModelState.Remove("Role");
             if (ModelState.IsValid)
             {
                 user.Password = PasswordHelper.GetHashPassword(user.Password);
                 _context.Add(user);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                try
+                {
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                catch (DbUpdateException ex) 
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
             }
             ViewData["Role"] = new SelectList(_context.Roles, "Id", "Name", user.RoleId);
             return View(user);
@@ -88,7 +96,7 @@ namespace MusicSchoolEF.Controllers
             }
             // Делаем строку пустой, так как в БД она хранится в хэшированном виде
             user.Password = String.Empty;
-            ViewData["Role"] = new SelectList(_context.Roles, "Name", "Name", user.Role);
+            ViewData["Role"] = new SelectList(_context.Roles, "Id", "Name", user.Role);
             return View(user);
         }
 
@@ -97,13 +105,13 @@ namespace MusicSchoolEF.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(uint id, [Bind("Id,Role,FirstName,Surname,Patronymic,Login,Password")] User user)
+        public async Task<IActionResult> Edit(uint id, [Bind("Id,RoleId,FirstName,Surname,Patronymic,Login,Password")] User user)
         {
             if (id != user.Id)
             {
                 return NotFound();
             }
-
+            ModelState.Remove("Role");
             if (ModelState.IsValid)
             {
                 try
@@ -126,7 +134,7 @@ namespace MusicSchoolEF.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["Role"] = new SelectList(_context.Roles, "Name", "Name", user.Role);
+            ViewData["Role"] = new SelectList(_context.Roles, "Id", "Name", user.Role);
             return View(user);
         }
 

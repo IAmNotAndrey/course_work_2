@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using MusicSchoolEF.Helpers.Converters;
 using MusicSchoolEF.Helpers.ReportBuilders;
 using MusicSchoolEF.Helpers.TreeBuilders;
 using MusicSchoolEF.Models.Db;
@@ -25,7 +26,7 @@ namespace MusicSchoolEF.Controllers
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> GenerateStudentReport(uint id)
+		public async Task<IActionResult> GenerateStudentReport(uint id, ReportExtension reportExtension)
 		{
 			// Находим все занятия, `Student` которых равен текущему ученику (`Student` == `id`)
 			var allStudentTasks = await _studentNodeConnectionRepository
@@ -39,10 +40,26 @@ namespace MusicSchoolEF.Controllers
 			ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
 			var report = ReportBuilder.GetStudentTaskExcelReport(tree);
-			var fileBytes = report.GetAsByteArray();
-			var fileName = $"report.xlsx";
+			byte[] fileBytes;
+			string fileName;
 
-			return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+			switch (reportExtension)
+			{
+				case ReportExtension.Xlsx:
+					fileBytes = await report.GetAsByteArrayAsync();
+					fileName = $"report.xlsx";
+
+					return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", fileName);
+
+				case ReportExtension.Csv:
+					fileBytes = report.ConvertToCsv();
+					fileName = $"report.csv";
+
+					return File(fileBytes, "text/csv", fileName);
+
+				default:
+					return BadRequest();
+			}
 		}
 	}
 }

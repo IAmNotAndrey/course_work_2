@@ -6,7 +6,6 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
 	public static partial class TreeBuilder
 	{
 		// note Замечания, сделанные в `StudentNodes.cs` справедливы и для `TeacherNodes.cs`
-		// todo Сделать сортировку по `Priority`
 
 		public static TreeNode<Node> GetTeacherNodesTree(ICollection<Node> collection)
 		{
@@ -16,6 +15,7 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
 			Rec(ref treeRoot, in collection);
 
 			return treeRoot;
+
 		}
 
 		private static void Rec(ref TreeNode<Node> treeNode, in ICollection<Node> collection)
@@ -23,6 +23,11 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
 			// Если передаётся корень
 			if (treeNode.IsEmpty)
 			{
+				// Сортировка по Priority, потом по Name
+				var orderedCollection = collection
+					.OrderBy(n => n.Priority)
+					.ThenBy(n => n.Name);
+
 				foreach (var node in collection)
 				{
 					// Ищем все корневые вершины: у которых `Node`.`Parent` = (null или вершине, которой нет в `collection`)

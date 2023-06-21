@@ -77,3 +77,11 @@
 	top: 0;
 /*	visibility: hidden;*/
 }
+
+.selected-tree-node {
+	background-color: cyan;
+}
+
+.hovered-tree-node {
+	background-color: grey;
+}

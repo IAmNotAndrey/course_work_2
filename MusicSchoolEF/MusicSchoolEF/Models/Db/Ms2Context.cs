@@ -42,6 +42,8 @@ public partial class Ms2Context : DbContext
 
             entity.ToTable("groups");
 
+            entity.HasIndex(e => e.Name, "name").IsUnique();
+
             entity.Property(e => e.Id)
                 .HasColumnType("int(10) unsigned")
                 .HasColumnName("id");

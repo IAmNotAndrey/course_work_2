@@ -39,6 +39,9 @@ public partial class User
 
     private string _GetAllText()
     {
-        return $"{FullName} {Role.Name} {Login} {Password}";
+        // fixme ошибка "System.InvalidOperationException: "This MySqlConnection is already in use. See https://fl.vu/mysql-conn-reuse" при попытке использовать `Role.Name`".
+        // Кроме того, возникает ошибка с Role.Name = null при попытке создать новый `User.
+        //return $"{FullName} {Role?.Name ?? ""} {Login} {Password}";
+        return $"{FullName} {Login} {Password}";
     }
 }

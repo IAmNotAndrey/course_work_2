@@ -6,7 +6,6 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
     public static partial class TreeBuilder
     {
 		// note Возможна ситуация, когда дерево отображено в `nodes` (БД) корректно: все вершины образуют целостное дерево - однако в `student_node_connections` могут быть добавлены не все вершины из этого целостного дерева. Таким образом, образуются разорванные цепочки, которые будут представлены в виде разных деревьев в функции `GetStudentNodeConnectionsTree`.
-		// todo Сделать сортировку по `Priority`
 
 		/// <param name="collection">Коллекция всех `StudentNodeConnections`, связанных с определённым студентом.
 		/// Для корректной работы требуется подключить `StudentNodeConnection`.`NodeNavigation` и  `StudentNodeConnection`.`NodeNavigation`.`InverseParentNavigation`</param>
@@ -26,7 +25,12 @@ namespace MusicSchoolEF.Helpers.TreeBuilders
             // Если передаётся корень
             if (treeNode.IsEmpty)
             {
-                foreach (var snc in collection)
+                // Сортируем по приоритету, потом по названию
+                var orderedCollection = collection
+                    .OrderBy(snc => snc.Node.Priority)
+                    .ThenBy(snc => snc.Node.Name);
+
+                foreach (var snc in orderedCollection)
                 {
                     // Ищем все корневые вершины: у которых `Node`.`Parent` = (null или вершине, которой нет в `collection`)
                     if (snc.Node.Parent == null

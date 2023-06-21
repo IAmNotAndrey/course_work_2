@@ -1,6 +1,6 @@
 ﻿@using MusicSchoolEF.Models.Db;
 @using MusicSchoolEF.Models.Defaults;
-@model List<User>
+@model IQueryable<User>
 
 @{
 	ViewData["Title"] = "Task Assessment Page";
@@ -42,7 +42,14 @@
 
 <div>
 	<button id="editButton" class="btn btn-primary">Редактировать</button>
-	<button id="report-button" class="btn btn-secondary">Отчёт</button>
+	<button id="report-button-xlsx" class="btn btn-success btn-report">
+		<object class="report-button-svg" type="image/svg+xml" data="~/icons/xlsx.svg" width="25" height="25">Скачать отчёт в .xlsx-формате</object>
+		.xlsx
+	</button>
+	<button id="report-button-csv" class="btn btn-success btn-report">
+		<object class="report-button-svg" type="image/svg+xml" data="~/icons/csv.svg" width="25" height="25">Скачать отчёт в .csv-формате</object>
+		.csv
+	</button>
 </div>
 
 <!--<script src="~/js/clear_local_storage.js"></script>-->
@@ -108,10 +115,16 @@
 			// Перенаправляемся на форму редактирования задания
 			window.location.href = '@Url.Action("EditStudentTask", "Teacher")?studentId=' + selectedStudentId + '&nodeId=' + selectedNodeId
 		});
-		// Обработка нажатия на кнопку "Отчёт"
-		$('#report-button').click(function () {
+		// Обработка нажатия на кнопку ".xlsx"
+		$('#report-button-xlsx').click(function () {
 			var selectedStudentId = localStorage.getItem('selectedStudentId');
-			var downloadLink = '@Url.Action("TryGenerateStudentTaskReport", "Teacher")';
+			var downloadLink = '@Url.Action("TryGenerateXlsxStudentTaskReport", "Teacher")';
+			// Имитируем клик по ссылке для запуска скачивания файла
+			window.location.href = downloadLink + '?studentId=' + selectedStudentId;
+		});
+		$('#report-button-csv').click(function () {
+			var selectedStudentId = localStorage.getItem('selectedStudentId');
+			var downloadLink = '@Url.Action("TryGenerateCsvStudentTaskReport", "Teacher")';
 			// Имитируем клик по ссылке для запуска скачивания файла
 			window.location.href = downloadLink + '?studentId=' + selectedStudentId;
 		});

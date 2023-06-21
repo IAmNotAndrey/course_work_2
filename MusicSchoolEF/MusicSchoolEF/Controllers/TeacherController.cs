@@ -174,10 +174,9 @@ namespace MusicSchoolEF.Controllers
 		{
 			// Поиск всех учеников, которым заданы задания, создателем которых является авторизованный учитель
 			// + Сортируем их по ФИО
-			var allStudents = (
-				(IQueryable<User>)
-				await _studentRepository
+			var allStudents = (await _studentRepository
 				.GetStudentsAssignedTasksByTeacherAsync(id))
+				.AsQueryable()
 				.GetSortedUsersByFullName();
 
 			//// Создаём пару (студент-его дерево заданий)
@@ -278,9 +277,9 @@ namespace MusicSchoolEF.Controllers
 			Node task = await _nodeRepository.GetNodeByIdAsync(taskId.Value)
 				?? throw new NullReferenceException();
 			// Находим всех студентов и сортируем по ФИО
-			var students = 
-				((IQueryable<User>)
-				await _studentRepository.GetAllStudentsAsync())
+			var students = (await _studentRepository
+				.GetAllStudentsAsync())
+				.AsQueryable()
 				.GetSortedUsersByFullName();
 
 			// Создание ViewModel и заполнение списков
@@ -368,7 +367,7 @@ namespace MusicSchoolEF.Controllers
         #endregion
 
         [HttpGet]
-        public IActionResult TryGenerateStudentTaskReport(uint? studentId)
+        public IActionResult TryGenerateXlsxStudentTaskReport(uint? studentId)
         {
             if (!studentId.HasValue)
             {
@@ -376,7 +375,19 @@ namespace MusicSchoolEF.Controllers
                 return RedirectToAction("TaskAssessment", "Teacher");
             }
 
-			return RedirectToAction("GenerateStudentReport", "Report", new { id = studentId.Value });
+			return RedirectToAction("GenerateStudentReport", "Report", new { id = studentId.Value, reportExtension = ReportExtension.Xlsx });
         }
-    }
+
+		[HttpGet]
+		public IActionResult TryGenerateCsvStudentTaskReport(uint? studentId)
+		{
+			if (!studentId.HasValue)
+			{
+				TempData["ErrorMessage"] = "Ошибка: не выбран ученик.";
+				return RedirectToAction("TaskAssessment", "Teacher");
+			}
+
+			return RedirectToAction("GenerateStudentReport", "Report", new { id = studentId.Value, reportExtension = ReportExtension.Csv });
+		}
+	}
 }

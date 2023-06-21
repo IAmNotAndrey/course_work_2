@@ -71,9 +71,15 @@ namespace MusicSchoolEF.Controllers
         //   }
 
         [HttpGet]
-        public IActionResult GenerateReport(uint id)
+        public IActionResult GenerateXlsxReport(uint id)
         {
-			return RedirectToAction("GenerateStudentReport", "Report", new { id = id });
+			return RedirectToAction("GenerateStudentReport", "Report", new { id = id, reportExtension = ReportExtension.Xlsx });
+		}
+
+		[HttpGet]
+		public IActionResult GenerateCsvReport(uint id)
+		{
+			return RedirectToAction("GenerateStudentReport", "Report", new { id = id, reportExtension = ReportExtension.Csv });
 		}
 	}
 }
