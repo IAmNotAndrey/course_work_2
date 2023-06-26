@@ -1,94 +1,98 @@
 ﻿@model IEnumerable<MusicSchoolEF.Models.Db.User>
 
 @{
-    ViewData["Title"] = "Главная";
+	ViewData["Title"] = "Пользователи";
 }
 
 <h1>Главная</h1>
 
 <p>
-    <a asp-action="Create">Создать пользователя</a>
+	<a asp-action="Create">Создать пользователя</a>
 </p>
 
-<h1>Поиск</h1>
 <form method="get" action="@Url.Action("Search", "Users")">
-    <div class="form-group">
-        <input type="text" name="query" class="form-control" placeholder="Введите текст" />
-    </div>
-    <button type="submit" class="btn btn-primary">Найти</button>
+	<div class="row form-group">
+		<div class="col-md-7">
+			<input type="text" name="query" class="form-control" placeholder="Введите текст" />
+		</div>
+		<div class="col-md-5">
+			<button type="submit" class="btn btn-success">Найти</button>
+		</div>
+	</div>
 </form>
 
 <table class="table">
-    <thead>
-        <tr>
-            <!--
-            <th>
-                @Html.DisplayNameFor(model => model.Surname)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FirstName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Patronymic)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Login)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Role)
-            </th>
-            -->
-            <th>
-                @Html.DisplayName("Фамилия")
-            </th>
-            <th>
-                @Html.DisplayName("Имя")
-            </th>
-            <th>
-                @Html.DisplayName("Отчество")
-            </th>
-            <th>
-                @Html.DisplayName("Логин")
-            </th>
-            <th>
-                @Html.DisplayName("Пароль")
-            </th>
-            <th>
-                @Html.DisplayName("Роль")
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Surname)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FirstName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Patronymic)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Login)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role.Name)
-            </td>
-            <td>
-                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id">Изменить</a>
-                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Детали</a>
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
-            </td>
-        </tr>
-}
-    </tbody>
+	<thead>
+		<tr>
+			<!--
+			<th>
+			@Html.DisplayNameFor(model => model.Surname)
+			</th>
+			<th>
+			@Html.DisplayNameFor(model => model.FirstName)
+			</th>
+			<th>
+			@Html.DisplayNameFor(model => model.Patronymic)
+			</th>
+			<th>
+			@Html.DisplayNameFor(model => model.Login)
+			</th>
+			<th>
+			@Html.DisplayNameFor(model => model.Password)
+			</th>
+			<th>
+			@Html.DisplayNameFor(model => model.Role)
+			</th>
+			-->
+			<th>
+				@Html.DisplayName("Фамилия")
+			</th>
+			<th>
+				@Html.DisplayName("Имя")
+			</th>
+			<th>
+				@Html.DisplayName("Отчество")
+			</th>
+			<th>
+				@Html.DisplayName("Логин")
+			</th>
+			<th>
+				@Html.DisplayName("Пароль")
+			</th>
+			<th>
+				@Html.DisplayName("Роль")
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Surname)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.FirstName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Patronymic)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Login)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Password)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Role.Name)
+				</td>
+				<td>
+					<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Изменить</a>
+					<a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Детали</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>

@@ -18,18 +18,18 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-6 col-md-12">
-			<h1>Задания</h1>
+			<h1>Занятия</h1>
 			<div>
 				<ul id="task-tree" class="treeline">
-					@Html.Raw(TreeRender.RenderTree(Model, "Задания"))
+					@Html.Raw(TreeRender.RenderTree(Model, "Занятия"))
 				</ul>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-12">
 			<div>
-				<h1>Информация о вершине:</h1>
-				<p>Название вершины: <span id="node-name"></span></p>
-				<p>Описание вершины: <span id="node-description"></span></p>
+				<h1>Информация о занятии</h1>
+				<p>Название: <span id="node-name"></span></p>
+				<p>Описание: <span id="node-description"></span></p>
 			</div>
 			<div>
 				<button id="editButton" class="btn btn-primary">Редактировать</button>

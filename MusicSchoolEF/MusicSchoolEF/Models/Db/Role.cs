@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Linq;
 
 namespace MusicSchoolEF.Models.Db;
 
 public partial class Role
 {
-    public string Name { get; set; } = null!;
+	[Display(Name = "Название")]
+	public string Name { get; set; } = null!;
 
     public uint Id { get; set; }
 

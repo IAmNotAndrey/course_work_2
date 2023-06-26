@@ -6,7 +6,7 @@
 	ViewData["Title"] = "Task Assessment Page";
 }
 
-<h1>StudentList</h1>
+<h1>Ученики</h1>
 
 @if (TempData.ContainsKey("ErrorMessage"))
 {
@@ -25,7 +25,7 @@
 	</ul>
 </div>
 
-<h1>StudentTaskList</h1>
+<h1>Занятия</h1>
 <!-- Список КОРНЕВЫХ заданий для выбранного студента -->
 <div>
 	<ul id="student-task-tree" class="treeline list-group list-group-flush">
@@ -33,15 +33,15 @@
 </div>
 
 <div>
-	<h3>Информация о вершине:</h3>
-	<p>Название вершины: <span id="node-name"></span></p>
-	<p>Описание вершины: <span id="node-description"></span></p>
+	<h3>Информация о занятии:</h3>
+	<p>Название: <span id="node-name"></span></p>
+	<p>Описание: <span id="node-description"></span></p>
 	<p>Оценка: <span id="node-mark"></span></p>
 	<p>Комментарий: <span id="node-comment"></span></p>
 </div>
 
 <div>
-	<button id="editButton" class="btn btn-primary">Редактировать</button>
+	<button id="editButton" class="btn btn-primary">Оценить</button>
 	<button id="report-button-xlsx" class="btn btn-success btn-report">
 		<object class="report-button-svg" type="image/svg+xml" data="~/icons/xlsx.svg" width="25" height="25">Скачать отчёт в .xlsx-формате</object>
 		.xlsx

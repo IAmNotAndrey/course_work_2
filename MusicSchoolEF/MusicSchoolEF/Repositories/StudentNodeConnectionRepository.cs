@@ -17,9 +17,6 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<StudentNodeConnection>> GetStudentNodeConnectionsByStudentIdAsync(uint studentId)
 		{
 			var allStudentTasks = await _dbContext.StudentNodeConnections
-				//.Include(snc => snc.NodeNavigation)
-				//.Include(snc => snc.NodeNavigation.InverseParentNavigation) // Подключение потомков
-				//.Include(snc => snc.NodeNavigation.OwnerNavigation)
 				.Where(snc => snc.StudentId == studentId)
 				.ToListAsync();
 
@@ -29,7 +26,6 @@ namespace MusicSchoolEF.Repositories
 		public async Task<List<StudentNodeConnection>> GetStudentNodeConnectionsByStudentIdAndTeacherIdAsync(uint studentId, uint teacherId)
 		{
 			return await _dbContext.StudentNodeConnections
-				//.Include(snc => snc.NodeNavigation)
 				.Where(snc => snc.StudentId == studentId
 							&& snc.Node.Owner == teacherId)
 				.ToListAsync();
@@ -38,7 +34,6 @@ namespace MusicSchoolEF.Repositories
 		public async Task<StudentNodeConnection?> GetStudentNodeConnectionByPrimaryKey(uint studentId, uint nodeId)
 		{
 			return await _dbContext.StudentNodeConnections
-				//.Include(snc => snc.NodeNavigation)
 				.SingleOrDefaultAsync(snc => snc.StudentId == studentId && snc.NodeId == nodeId);
 		}
 

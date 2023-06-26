@@ -1,32 +1,48 @@
 ﻿@model IEnumerable<MusicSchoolEF.Models.Db.Group>
 
 @{
-    ViewData["Title"] = "Главная";
+	ViewData["Title"] = "Группы";
 }
 
 <h1>Главная</h1>
 
 <p>
-    <a asp-action="Create">Создать группу</a>
+	<a asp-action="Create">Создать группу</a>
 </p>
+
+<form method="get" action="@Url.Action("Search", "Groups")">
+	<div class="row form-group">
+		<div class="col-md-7">
+			<input type="text" name="query" class="form-control" placeholder="Введите текст" />
+		</div>
+		<div class="col-md-5">
+			<button type="submit" class="btn btn-success">Найти</button>
+		</div>
+	</div>
+</form>
+
 <table class="table">
-    <thead>
-        <tr>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.Id">Изменить</a>
-                <a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Детали</a> 
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
-            </td>
-        </tr>
-}
-    </tbody>
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayName("Название")
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Name)
+				</td>
+				<td>
+					<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Изменить</a>
+					<a class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Детали</a>
+					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Удалить</a>
+				</td>
+			</tr>
+		}
+	</tbody>
 </table>

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicSchoolEF.Models.Db;
 
 public partial class Group
 {
+    [Display(Name = "Название")]
     public string Name { get; set; } = null!;
 
     public uint Id { get; set; }

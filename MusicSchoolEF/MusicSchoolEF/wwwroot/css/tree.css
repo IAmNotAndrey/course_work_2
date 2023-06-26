@@ -79,7 +79,7 @@
 }
 
 .selected-tree-node {
-	background-color: cyan;
+	background-color: lightgrey;
 }
 
 .hovered-tree-node {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MusicSchoolEF.Models.Db;
 
@@ -7,15 +8,19 @@ public partial class Node
 {
     public uint Id { get; set; }
 
-    public string Name { get; set; } = null!;
+    [Display(Name = "Название")]
+	public string Name { get; set; } = null!;
 
-    public uint Owner { get; set; }
+	[Display(Name = "Преподаватель")]
+	public uint Owner { get; set; }
 
-    public string? Description { get; set; }
+	[Display(Name = "Описание")]
+	public string? Description { get; set; }
 
-    public uint? ParentId { get; set; }
+	public uint? ParentId { get; set; }
 
-    public uint Priority { get; set; }
+	[Display(Name = "Приоритет")]
+	public uint Priority { get; set; }
 
     public virtual ICollection<Node> InverseParent { get; set; } = new List<Node>();
 

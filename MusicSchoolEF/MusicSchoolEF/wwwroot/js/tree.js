@@ -13,17 +13,30 @@
 			}
 		}
 	});
-	// Обработка нажатия по элементу дерева
-	$('.treeline').on('click', '.tree-node', function (event) {
-		event.stopPropagation();
 
-		// Удаляем класс "selected" у предыдущего выбранного элемента
-		$('.treeline .tree-node.selected-tree-node').removeClass('selected-tree-node');
+	//$(".tree-node").click(function (event) {
+	//	event.stopPropagation();
 
-		var node = $(this);
-		// Добавляем класс "selected-tree-node" только к родительскому элементу
-		node.closest('.tree-node').addClass('selected-tree-node');
-	});
+	//	// Удаляем класс "selected" у предыдущего выбранного элемента
+	//	$('.tree-node.selected-tree-node').removeClass('selected-tree-node');
+
+	//	var node = $(this);
+	//	// Добавляем класс "selected-tree-node" только к родительскому элементу
+	//	node.addClass('selected-tree-node');
+	//});
+
+	//// Обработка нажатия по элементу дерева
+	//$('.treeline').on('click', '.tree-node', function (event) {
+
+	//	event.stopPropagation();
+
+	//	// Удаляем класс "selected" у предыдущего выбранного элемента
+	//	$('.treeline .tree-node.selected-tree-node').removeClass('selected-tree-node');
+
+	//	var node = $(this);
+	//	// Добавляем класс "selected-tree-node" только к родительскому элементу
+	//	node.closest('.tree-node').addClass('selected-tree-node');
+	//});
 
 	//// Обработка наведения курсора на элемент дерева
 	//$('.treeline').on('mouseenter', '.tree-node', function (event) {
@@ -38,4 +51,3 @@
 	//	$(this).css('background-color', '');
 	//});
 });
-

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Drawing.Text;
+using System.Xml.Linq;
 
 namespace MusicSchoolEF.Models.Db;
 
@@ -10,15 +12,20 @@ public partial class User
 
     public uint RoleId { get; set; }
 
-    public string FirstName { get; set; } = null!;
+	[Display(Name = "Имя")]
+	public string FirstName { get; set; } = null!;
 
-    public string Surname { get; set; } = null!;
+	[Display(Name = "Фамилия")]
+	public string Surname { get; set; } = null!;
 
-    public string Patronymic { get; set; } = null!;
+	[Display(Name = "Отчество")]
+	public string Patronymic { get; set; } = null!;
 
-    public string Login { get; set; } = null!;
+	[Display(Name = "Логин")]
+	public string Login { get; set; } = null!;
 
-    public string Password { get; set; } = null!;
+	[Display(Name = "Пароль")]
+	public string Password { get; set; } = null!;
 
     public virtual ICollection<Node> Nodes { get; set; } = new List<Node>();
 

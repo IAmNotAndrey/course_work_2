@@ -262,5 +262,19 @@ namespace MusicSchoolEF.Controllers
         {
             return (_context.Groups?.Any(e => e.Id == id)).GetValueOrDefault();
         }
-    }
+
+		public IActionResult Search(string query)
+		{
+			if (string.IsNullOrEmpty(query))
+				return RedirectToAction("Index");
+
+			query = query.MyTrim().ToLower();
+
+            IEnumerable<Group> groups = _context.Groups
+                .AsEnumerable()
+                .Where(g => g.Name.ToLower().Contains(query));
+
+			return View("Index", groups);
+		}
+	}
 }
