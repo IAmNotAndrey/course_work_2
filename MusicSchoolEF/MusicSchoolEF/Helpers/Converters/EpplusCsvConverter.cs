@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace MusicSchoolEF.Helpers.Converters
+namespace MusicSchoolAsp.Helpers.Converters
 {
 	public static class EpplusCsvConverter
 	{

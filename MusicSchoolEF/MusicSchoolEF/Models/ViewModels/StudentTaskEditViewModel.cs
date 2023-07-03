@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace MusicSchoolEF.Models.ViewModels
+namespace MusicSchoolAsp.Models.ViewModels
 {
 	public class StudentTaskEditViewModel
 	{

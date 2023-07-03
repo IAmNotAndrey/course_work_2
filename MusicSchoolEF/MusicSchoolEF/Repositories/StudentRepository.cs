@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using MusicSchoolEF.Repositories.Interfaces;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using MusicSchoolAsp.Repositories.Interfaces;
 
-namespace MusicSchoolEF.Repositories
+namespace MusicSchoolAsp.Repositories
 {
 	public class StudentRepository : IStudentRepository
 	{

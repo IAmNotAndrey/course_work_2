@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HZqYzbrMfjVw6Okgxk+TM6kyp23m726DlflMlBuq8jr5zMhiyjyzHLxgp3PnTjJQwJRLscckdDFvFl3D+ZY/sg==",
+  "dgSpecHash": "ri1npUMqBQB7ixL0FrXqdjNjGGGS8NP3X3X16S/H00MU9Nto0U+jmQ4WWsP0IJGxtpqfCKO9WXlcwZ2kKYdWSw==",
   "success": true,
-  "projectFilePath": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolEF.csproj",
+  "projectFilePath": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolAsp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\perma\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\perma\\.nuget\\packages\\epplus\\6.2.4\\epplus.6.2.4.nupkg.sha512",

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace MusicSchoolEF.Models.Db;
+namespace MusicSchoolAsp.Models.Db;
 
 public partial class Ms2Context : DbContext
 {

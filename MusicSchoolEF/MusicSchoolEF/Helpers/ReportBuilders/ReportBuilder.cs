@@ -1,9 +1,9 @@
-﻿using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
+﻿using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
-namespace MusicSchoolEF.Helpers.ReportBuilders
+namespace MusicSchoolAsp.Helpers.ReportBuilders
 {
     public static class ReportBuilder
     {

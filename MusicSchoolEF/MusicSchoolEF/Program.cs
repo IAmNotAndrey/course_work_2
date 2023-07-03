@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.Build.Framework;
 using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using MusicSchoolEF.Repositories;
-using MusicSchoolEF.Repositories.Interfaces;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using MusicSchoolAsp.Repositories;
+using MusicSchoolAsp.Repositories.Interfaces;
 
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,4 +1,4 @@
-﻿namespace MusicSchoolEF.Helpers.HtmlStrings
+﻿namespace MusicSchoolAsp.Helpers.HtmlStrings
 {
 	public static class ListGetter<T>
 	{

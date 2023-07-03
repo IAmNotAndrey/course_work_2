@@ -3,11 +3,11 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MusicSchoolEF.Models.Db;
+using MusicSchoolAsp.Models.Db;
 
 #nullable disable
 
-namespace MusicSchoolEF.Migrations
+namespace MusicSchoolAsp.Migrations
 {
     [DbContext(typeof(Ms2Context))]
     partial class Ms2ContextModelSnapshot : ModelSnapshot

@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace MusicSchoolEF.Helpers
+namespace MusicSchoolAsp.Helpers
 {
     public static class StringHelper
     {

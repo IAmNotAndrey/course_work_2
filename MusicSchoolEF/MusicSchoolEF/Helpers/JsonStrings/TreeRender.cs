@@ -1,10 +1,10 @@
-﻿using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
+﻿using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace MusicSchoolEF.Helpers.JsonStrings
+namespace MusicSchoolAsp.Helpers.JsonStrings
 {
 	public static class TreeRender
 	{

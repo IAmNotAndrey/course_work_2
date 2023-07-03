@@ -1,7 +1,7 @@
-﻿using MusicSchoolEF.Models.Db;
+﻿using MusicSchoolAsp.Models.Db;
 using System.Collections.Generic;
 
-namespace MusicSchoolEF.Models.ViewModels
+namespace MusicSchoolAsp.Models.ViewModels
 {
     public class StudentCheckBoxViewModel
     {

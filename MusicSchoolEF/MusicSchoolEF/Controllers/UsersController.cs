@@ -6,12 +6,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Helpers;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using static MusicSchoolEF.Repositories.UserRepositoryExtensions;
+using MusicSchoolAsp.Helpers;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using static MusicSchoolAsp.Repositories.UserRepositoryExtensions;
 
-namespace MusicSchoolEF.Controllers
+namespace MusicSchoolAsp.Controllers
 {
     [Authorize(Roles = Roles.Admin)]
     public class UsersController : Controller

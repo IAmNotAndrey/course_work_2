@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MusicSchoolEF\MusicSchoolEF.csproj" />
+    <ProjectReference Include="..\MusicSchoolEF\MusicSchoolAsp.csproj" />
   </ItemGroup>
 
 </Project>

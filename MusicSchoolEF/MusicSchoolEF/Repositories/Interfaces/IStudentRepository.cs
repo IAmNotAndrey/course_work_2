@@ -1,6 +1,6 @@
-﻿using MusicSchoolEF.Models.Db;
+﻿using MusicSchoolAsp.Models.Db;
 
-namespace MusicSchoolEF.Repositories.Interfaces
+namespace MusicSchoolAsp.Repositories.Interfaces
 {
 	public interface IStudentRepository
 	{

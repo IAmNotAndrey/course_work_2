@@ -1,7 +1,7 @@
-﻿using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.ViewModels;
+﻿using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.ViewModels;
 
-namespace MusicSchoolEF.Repositories.Interfaces
+namespace MusicSchoolAsp.Repositories.Interfaces
 {
 	public interface IStudentNodeConnectionRepository
 	{

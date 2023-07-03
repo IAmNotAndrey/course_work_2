@@ -1,4 +1,4 @@
-using static MusicSchoolEF.Helpers.PasswordHelper;
+using static MusicSchoolAsp.Helpers.PasswordHelper;
 
 namespace TestProject1
 {

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Drawing.Text;
 using System.Xml.Linq;
 
-namespace MusicSchoolEF.Models.Db;
+namespace MusicSchoolAsp.Models.Db;
 
 public partial class User
 {

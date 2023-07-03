@@ -4389,7 +4389,7 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "MusicSchoolEF/1.0.0": {
+      "MusicSchoolAsp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -4401,10 +4401,10 @@
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/MusicSchoolEF.dll": {}
+          "bin/placeholder/MusicSchoolAsp.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MusicSchoolEF.dll": {}
+          "bin/placeholder/MusicSchoolAsp.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -12183,16 +12183,16 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "MusicSchoolEF/1.0.0": {
+    "MusicSchoolAsp/1.0.0": {
       "type": "project",
-      "path": "../MusicSchoolEF/MusicSchoolEF.csproj",
-      "msbuildProject": "../MusicSchoolEF/MusicSchoolEF.csproj"
+      "path": "../MusicSchoolEF/MusicSchoolAsp.csproj",
+      "msbuildProject": "../MusicSchoolEF/MusicSchoolAsp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.NET.Test.Sdk >= 17.6.2",
-      "MusicSchoolEF >= 1.0.0",
+      "MusicSchoolAsp >= 1.0.0",
       "coverlet.collector >= 6.0.0",
       "xunit >= 2.4.2",
       "xunit.runner.visualstudio >= 2.4.5"
@@ -12230,8 +12230,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolEF.csproj": {
-              "projectPath": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolEF.csproj"
+            "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolAsp.csproj": {
+              "projectPath": "D:\\GitHub\\course_work_2\\MusicSchoolEF\\MusicSchoolEF\\MusicSchoolAsp.csproj"
             }
           }
         }

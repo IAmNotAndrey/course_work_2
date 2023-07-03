@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Repositories.Interfaces;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Repositories.Interfaces;
 
-namespace MusicSchoolEF.Repositories
+namespace MusicSchoolAsp.Repositories
 {
     public class GroupRepository : IGroupRepository
 	{

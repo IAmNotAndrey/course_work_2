@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace MusicSchoolEF.Models.Db;
+namespace MusicSchoolAsp.Models.Db;
 
 public partial class Group
 {

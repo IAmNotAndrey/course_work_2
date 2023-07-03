@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Helpers;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using MusicSchoolEF.Repositories;
+using MusicSchoolAsp.Helpers;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using MusicSchoolAsp.Repositories;
 using System.Collections.Immutable;
-using static MusicSchoolEF.Repositories.UserRepositoryExtensions;
+using static MusicSchoolAsp.Repositories.UserRepositoryExtensions;
 
-namespace MusicSchoolEF.Controllers
+namespace MusicSchoolAsp.Controllers
 {
 	[Authorize(Roles = Roles.Admin)]
 	[Route("Admin/{id:int}/{action=Index}")]

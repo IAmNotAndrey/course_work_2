@@ -1,4 +1,4 @@
-﻿namespace MusicSchoolEF.Models.Defaults
+﻿namespace MusicSchoolAsp.Models.Defaults
 {
 	public static class Roles
 	{

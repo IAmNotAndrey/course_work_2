@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace MusicSchoolEF.Migrations
+namespace MusicSchoolAsp.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

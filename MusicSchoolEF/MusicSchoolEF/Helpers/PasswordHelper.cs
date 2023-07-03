@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace MusicSchoolEF.Helpers
+namespace MusicSchoolAsp.Helpers
 {
 	public static class PasswordHelper
 	{

@@ -7,15 +7,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.Operations;
 using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using MusicSchoolEF.Repositories;
-using MusicSchoolEF.Repositories.Interfaces;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using MusicSchoolAsp.Repositories;
+using MusicSchoolAsp.Repositories.Interfaces;
 using MySqlConnector;
 using NuGet.Packaging;
-using static MusicSchoolEF.Helpers.StringHelper;
+using static MusicSchoolAsp.Helpers.StringHelper;
 
-namespace MusicSchoolEF.Controllers
+namespace MusicSchoolAsp.Controllers
 {
     [Authorize(Roles = Roles.Admin)]
     public class GroupsController : Controller

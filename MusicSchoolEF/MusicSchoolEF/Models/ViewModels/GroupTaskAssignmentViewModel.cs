@@ -1,6 +1,6 @@
-﻿using MusicSchoolEF.Models.Db;
+﻿using MusicSchoolAsp.Models.Db;
 
-namespace MusicSchoolEF.Models.ViewModels
+namespace MusicSchoolAsp.Models.ViewModels
 {
     public class GroupTaskAssignmentViewModel
     {

@@ -1,7 +1,7 @@
-﻿using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
+﻿using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
 
-namespace MusicSchoolEF.Helpers.TreeBuilders
+namespace MusicSchoolAsp.Helpers.TreeBuilders
 {
 	public static partial class TreeBuilder
 	{

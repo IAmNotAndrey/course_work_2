@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MusicSchoolEF.Models;
-using MusicSchoolEF.Models.ViewModels;
+using MusicSchoolAsp.Models;
+using MusicSchoolAsp.Models.ViewModels;
 using System.Diagnostics;
 
-namespace MusicSchoolEF.Controllers
+namespace MusicSchoolAsp.Controllers
 {
     public class HomeController : Controller
 	{

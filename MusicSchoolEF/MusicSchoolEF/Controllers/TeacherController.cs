@@ -1,17 +1,17 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MusicSchoolEF.Helpers.TreeBuilders;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using MusicSchoolEF.Models.ViewModels;
-using MusicSchoolEF.Helpers.HtmlStrings.TreeRenders;
+using MusicSchoolAsp.Helpers.TreeBuilders;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using MusicSchoolAsp.Models.ViewModels;
+using MusicSchoolAsp.Helpers.HtmlStrings.TreeRenders;
 using Microsoft.AspNetCore.Authorization;
-using MusicSchoolEF.Repositories.Interfaces;
-using MusicSchoolEF.Helpers.ReportBuilders;
+using MusicSchoolAsp.Repositories.Interfaces;
+using MusicSchoolAsp.Helpers.ReportBuilders;
 using OfficeOpenXml;
 using System.Threading.Tasks;
-using static MusicSchoolEF.Repositories.UserRepositoryExtensions;
+using static MusicSchoolAsp.Repositories.UserRepositoryExtensions;
 
-namespace MusicSchoolEF.Controllers
+namespace MusicSchoolAsp.Controllers
 {
     [Authorize(Roles = $"{Roles.Admin}, {Roles.Teacher}")]
 	[Route("Teacher/{id:int}/{action=Index}")]

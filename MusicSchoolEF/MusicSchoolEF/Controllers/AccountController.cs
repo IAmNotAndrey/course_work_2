@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MusicSchoolEF.Models.Db;
-using MusicSchoolEF.Models.Defaults;
-using MusicSchoolEF.Models.ViewModels;
-using MusicSchoolEF.Repositories.Interfaces;
+using MusicSchoolAsp.Models.Db;
+using MusicSchoolAsp.Models.Defaults;
+using MusicSchoolAsp.Models.ViewModels;
+using MusicSchoolAsp.Repositories.Interfaces;
 using System.Security.Claims;
-using static MusicSchoolEF.Helpers.PasswordHelper;
+using static MusicSchoolAsp.Helpers.PasswordHelper;
 
-namespace MusicSchoolEF.Controllers
+namespace MusicSchoolAsp.Controllers
 {
     public class AccountController : Controller
     {
